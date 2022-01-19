@@ -1,0 +1,14 @@
+.txt {
+    // txt colors
+    &--white {
+        color: $white;
+    }
+    // font weight
+    &--bold {
+        font-weight: 700;
+    }
+    // txt position
+    &--center {
+        text-align: center;
+    }
+}

@@ -5,4 +5,28 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Hlegal
-  body 
+    link(rel="stylesheet", href="./styles/main.css")
+  body
+    //- mixins
+    include ./pug/includes/mixins.pug
+    .main-wrap.bgc-gradient
+      header.header
+        .container
+          .header__wrap
+            .header-grid
+              .header-grid__logo
+                a(href="./index.html").logo.logo__wrap
+                  include ./pug/includes/logo.pug
+              .header-grid__contact.flex-d.flex--between
+                ul.lang-list.flex-d
+                  +langItem('Ук')
+                  +langItem('Ру')
+                  +langItem('En', 'lang-list__item--active')
+                ul.contact-list
+                  li.contact-list__item
+                    a(href="tel:0800211927").txt--bold.txt--white 0800 211 927
+              .header-grid__nav.flex-d.flex--end
+                .menu-btn.flex--center
+                  .menu-btn__burger
+      main.main-section
+    footer.footer

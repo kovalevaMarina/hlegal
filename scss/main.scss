@@ -3,3 +3,94 @@
 @import "./reset";
 @import "./common";
 
+.header {
+  &__wrap {
+    padding-top: 10px;
+  }
+  &-grid {
+    display: grid;
+    grid-template-areas:
+      'contact contact'
+      'logo nav';
+    &__logo {
+      grid-area: logo;
+    }
+
+    &__contact {
+      grid-area: contact;
+    }
+
+    &__nav {
+      grid-area: nav;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  &-svg {
+    fill: $white;
+    &__wrap {
+      width: 70px;
+      height: 32px;
+    }
+  }
+}
+
+.lang-list {
+  margin-bottom: 16px;
+  &__link {
+    display: block;
+    font-size: $txt-sm;
+    line-height: $txt-sm-ln-height;
+    padding: 5px 7px;
+  }
+
+  &__item {
+    border-radius: 8px;
+    &--active {
+      background-color: $red;
+    }
+  }
+}
+
+.contact-list {
+  margin-bottom: 16px;
+  &__item {
+    font-size: $txt-md;
+    line-height: $h4-ln-height;
+  }
+}
+
+.menu-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $transition-time;
+  &__burger {
+    width: 18px;
+    height: 2px;
+    background-color: $white;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      background-color: $white;
+    }
+
+    &::before {
+      transform: translateY(-6px);
+    }
+
+    &::after {
+      transform: translateY(6px);
+    }
+  }
+    
+}

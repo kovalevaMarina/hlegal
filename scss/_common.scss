@@ -1,14 +1,67 @@
+body {
+    font-family: $fm-montserrat;
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-section {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 $gutter;
+}
+
+.flex {
+    &-d {
+        display: flex;
+    }
+
+    &--center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--between {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--end {
+        justify-content: end;
+        align-items: center;
+    }
+}
+
+.d--none {
+    display: none;
+}
+
+.bgc-gradient {
+    background: $gradient-supersoft;
+}
+
 .txt {
-    // txt colors
     &--white {
         color: $white;
     }
-    // font weight
+    
     &--bold {
         font-weight: 700;
     }
-    // txt position
+
     &--center {
         text-align: center;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
     }
 }

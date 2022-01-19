@@ -1,5 +1,6 @@
 body {
     font-family: $fm-montserrat;
+    font-weight: 400;
 }
 
 .main-wrap {
@@ -29,6 +30,10 @@ body {
         align-items: center;
     }
 
+    &-align--center {
+        align-items: center;
+    }
+
     &--between {
         justify-content: space-between;
         align-items: center;
@@ -40,8 +45,12 @@ body {
     }
 }
 
-.d--none {
+.d--sm {
     display: none;
+}
+
+.d--xs {
+    display: flex;
 }
 
 .bgc-gradient {
@@ -49,8 +58,17 @@ body {
 }
 
 .txt {
+    &--main {
+       font-size: $txt-md;
+       line-height: $h4-ln-height; 
+    }
+
     &--white {
         color: $white;
+    }
+
+    &--normal {
+        font-weight: 400;
     }
     
     &--bold {

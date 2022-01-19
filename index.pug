@@ -17,16 +17,33 @@ html(lang="en")
               .header-grid__logo
                 a(href="./index.html").logo.logo__wrap
                   include ./pug/includes/logo.pug
-              .header-grid__contact.flex-d.flex--between
+              .header-grid__contact.header-space.flex-d.header-flex
                 ul.lang-list.flex-d
                   +langItem('Ук')
                   +langItem('Ру')
                   +langItem('En', 'lang-list__item--active')
-                ul.contact-list
+                ul.contact-list.flex-d.flex-align--center
+                  li.contact-list__item.d--sm
+                    a(href="https://goo.gl/maps/NM6RguTph8YZTya29" target='_blank').contact-list__link.txt--main.txt--white Kyiv, Mechnikova str., 14/1
                   li.contact-list__item
-                    a(href="tel:0800211927").txt--bold.txt--white 0800 211 927
-              .header-grid__nav.flex-d.flex--end
-                .menu-btn.flex--center
+                    a(href="tel:0800211927").contact-list__link.txt--main.txt--bold.txt--white 0800 211 927
+                  li.contact-list__item.d--sm
+                    a(href="#").contact-list__link.contact-list__link--icon
+                      svg.contact-list__link--icon-fb(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_25631_2608)')
+                          path(d='M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z')
+                        defs
+                          clippath#clip0_25631_2608
+                            rect(width='24' height='24' transform='translate(0 0.5)')
+              .header-grid__nav.flex-d.header-flex__nav
+                .menu-btn.flex--center.d--xs
                   .menu-btn__burger
+                nav.nav.d--sm
+                  ul.nav-list.flex-d
+                    +navItem('about us')
+                    +navItem('services')
+                    +navItem('team')
+                    +navItem('publications')
+                    +navItem('contact')
       main.main-section
     footer.footer

@@ -1,0 +1,63 @@
+@media (min-width: 768px) {
+  .d--sm {
+    display: block;
+  }
+  
+  .d--xs {
+    display: none;
+  }
+
+  .header {
+    &__wrap {
+      padding-top: 50px;
+    }
+
+    &-flex {
+      justify-content: flex-start;
+      &__nav {
+        justify-content: start;
+      }
+    }
+
+    &-space {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-grid {
+      grid-column: 1fr;
+      grid-template-areas:
+      'contact'
+      'logo'
+      'nav';
+    }
+  }
+
+  .logo {
+    &-svg__wrap {
+      width: 130px;
+      height: 60px;
+    }
+
+    &__wrap {
+      padding: 30px 0;
+    }
+  }
+
+  .contact-list {
+    &__item {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: $grey-separator;
+      }
+    }
+  }
+}

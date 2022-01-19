@@ -11,6 +11,7 @@ $grey-bg-alt: #ededf7;
 $grey-txt: #b3b3ba;
 $grey-separator: #e6e6f0;
 $white: #ffffff;
+$grey-space: rgba(245, 245, 250, 0.2);
 // gradient
 $gradient-main: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
 $gradient-soft: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
@@ -37,5 +38,9 @@ $h3-caps-ln-height: 17px;
 $txt-sm-ln-height: 15px;
 // media
 $gutter: 15px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1440px;
+$xl: 1920px;
 
 $transition-time: 0.3s ease;

@@ -4,6 +4,7 @@
 @import "./common";
 
 .header {
+  z-index: 1;
   &-flex {
     justify-content: space-between;
     &__nav {
@@ -153,6 +154,23 @@
       transform: translateY(6px);
     }
   }
+}
+// styles for main section
+
+.main-section {
+  &__bgc {
+    background-image: url("../assets/svg/symbol_letter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  &__content {
+    min-height: calc(100vh - 285px);
+  } 
 }
 
 @import "./media";

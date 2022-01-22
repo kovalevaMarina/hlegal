@@ -3,17 +3,6 @@ body {
     font-weight: 400;
 }
 
-.main-wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
-}
-
-.main-section {
-    flex-grow: 1;
-}
-
 .container {
     max-width: 1320px;
     margin: 0 auto;
@@ -58,10 +47,6 @@ body {
     display: flex;
 }
 
-.bgc-gradient {
-    background: $gradient-supersoft;
-}
-
 .title {
     &-h1 {
         font-size: $fs-h1;
@@ -73,6 +58,14 @@ body {
     &--main {
        font-size: $txt-md;
        line-height: $h4-ln-height; 
+    }
+
+    &--dark {
+        color: $blue-dark;
+    }
+
+    &--blue {
+        color: $blue-hover;
     }
 
     &--white {

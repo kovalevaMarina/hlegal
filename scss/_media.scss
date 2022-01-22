@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: $sm) {
   .d--sm {
     display: block;
   }
@@ -15,7 +15,7 @@
     &-flex {
       justify-content: flex-start;
       &__nav {
-        justify-content: start;
+        justify-content: flex-start;
       }
     }
 
@@ -26,7 +26,6 @@
     }
 
     &-grid {
-      grid-column: 1fr;
       grid-template-areas:
       'contact'
       'logo'
@@ -57,6 +56,23 @@
         padding: 3px;
         border-radius: 50%;
         background-color: $grey-separator;
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .header {
+    &-grid {
+      grid-template-areas:
+      'logo contact'
+      'logo nav';
+    }
+
+    &-flex {
+      justify-content: flex-end;
+      &__nav {
+        justify-content: flex-end;
       }
     }
   }

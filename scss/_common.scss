@@ -68,6 +68,14 @@ body {
         color: $blue-hover;
     }
 
+    &--blue-alt {
+        color: $blue-dark-alt;
+    }
+
+    &--grey {
+        color: $grey-txt;
+    }
+
     &--white {
         color: $white;
     }
@@ -86,5 +94,21 @@ body {
 
     &--uppercase {
         text-transform: uppercase;
+    }
+}
+
+.icon-fb {
+    &__link {
+    transition: $transition-time;
+        &--white {
+            fill: $white;
+        }
+
+        &--blue {
+            fill: $blue;
+        }
+        &:hover {
+            fill: $red;
+        }
     }
 }

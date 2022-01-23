@@ -21,8 +21,7 @@
 
     &-space {
       background-color: transparent;
-      padding: 0;
-      margin: 0;
+      @include reset;
     }
 
     &-grid {
@@ -34,28 +33,67 @@
   }
 
   .logo {
+    &__wrap {
+      padding: 15px 0;
+    }
     &-svg__wrap {
       width: 130px;
       height: 60px;
-    }
-
-    &__wrap {
-      padding: 30px 0;
     }
   }
 
   .contact-list {
     &__item {
-      position: relative;
-      padding-left: 20px;
+      @include circle;
       &::before {
-        content: '';
-        position: absolute;
-        left: 7px;
-        top: 7px;
-        padding: 3px;
-        border-radius: 50%;
+        @include circleBefore;
         background-color: $grey-separator;
+      }
+    }
+  }
+
+  .footer {
+    &-grid {
+      grid-template-areas:
+      'adress copyright' 
+      'phone phone';
+    }
+
+    &-adress {
+      &__list {
+        flex-direction: row;
+      }
+
+      &__item {
+        &:first-child {
+          margin-bottom: 0;
+        }
+
+        & + & {
+          @include circle;
+          &::before {
+            @include circleBefore;
+            background-color: $grey-txt;
+          }
+        }
+      }
+    }
+
+    &-contact {
+      &__list {
+        flex-direction: row;
+      }
+
+      &__item {
+        margin-bottom: 0;
+      }
+
+      &__item + &__item {
+        @include circle;
+        &::before {
+          @include circleBefore;
+          background-color: $grey-txt;
+        } 
       }
     }
   }

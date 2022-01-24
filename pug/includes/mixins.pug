@@ -6,3 +6,11 @@ mixin langItem(langName, langClass)
 mixin navItem (navName)
   li.nav-list__item
     a(href="#").txt--main.txt--bold.txt--white.nav-list__link= navName
+
+mixin serviceItem (iconName, titleName, text)
+  li.services-list__item
+    .services-list__img.flex--center
+      object.services-list__img--icon(data="./assets/svg/" + iconName + ".svg")
+    h3.title-h3.services-list__title.txt--bold
+      a(href="#").services-list__title--link.txt--blue= titleName
+    block

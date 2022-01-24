@@ -52,6 +52,16 @@ body {
         font-size: $fs-h1;
         line-height: $h1-ln-height;
     }
+
+    &-h2 {
+        font-size: $fs-h2;
+        line-height: $h2-ln-height;
+    }
+
+    &-h3 {
+        font-size: $fs-h3;
+        line-height: $h3-ln-height;
+    }
 }
 
 .txt {
@@ -60,12 +70,23 @@ body {
        line-height: $h4-ln-height; 
     }
 
+    &--caps {
+        font-size: $fs-h3-caps;
+        line-height: $h3-caps-ln-height;
+        color: $blue;
+    }
+
+    &--md {
+        font-size: $txt-md;
+        line-height: $txt-md-ln-height;
+    }
+
     &--dark {
         color: $blue-dark;
     }
 
     &--blue {
-        color: $blue-hover;
+        color: $blue;
     }
 
     &--blue-alt {
@@ -78,6 +99,12 @@ body {
 
     &--white {
         color: $white;
+    }
+
+    &--gradient {
+        background: $gradient-txt;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &--normal {
@@ -109,6 +136,31 @@ body {
         }
         &:hover {
             fill: $red;
+        }
+    }
+}
+
+.arrow {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-right: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    transform: rotate(-45deg);
+    margin-left: 3px;
+    transition: $transition-time;
+}
+
+.heading {
+    margin-bottom: 10px;
+    &__link {
+        transition: $transition-time;
+        &:hover {
+            color: $red;
+        }
+        &:hover .arrow {
+            border-right: 2px solid $red;
+            border-bottom: 2px solid $red; 
         }
     }
 }

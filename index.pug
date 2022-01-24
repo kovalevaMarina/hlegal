@@ -7,7 +7,6 @@ html(lang="en")
     title Hlegal
     link(rel="stylesheet", href="./styles/main.css")
   body
-    //- mixins
     include ./pug/includes/mixins.pug
     .section-gradient
       .section-gradient__shadow.section-gradient__shadow--first
@@ -42,7 +41,7 @@ html(lang="en")
                               clippath#clip0_25631_2608
                                 rect(width='24' height='24' transform='translate(0 0.5)')
                   .header-grid__nav.flex-d.header-flex__nav
-                    .menu-btn.flex--center.d--xs
+                    button.menu-btn.flex--center.d--xs
                       .menu-btn__burger
                     nav.nav.d--sm
                       ul.nav-list.flex-d
@@ -56,6 +55,23 @@ html(lang="en")
           .main-section__btn
             a(href="#").main-section__scroll
       
+      section.services
+        .container
+          .heading
+            a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.flex-d.flex-align--center Services
+              span.arrow
+          h2.title-h1.txt--bold.txt--gradient What can we do better than others?
+          ul.services-list
+            li.services-list__item
+              .services-list__img.flex--center
+                object.services-list__img--icon(data="./assets/svg/ecommerce.svg")
+              h3.title-h3.services-list__title.txt--bold
+                a(href="#").services-list__title--link.txt--blue IT and e-commerce
+              p.services-list__txt.txt--md.txt--white.
+                An endless stream of contracts, tax issues, labor relations, 
+                corporate papers - legal work distracts you from doing business. 
+                But there is not much work to do to hire an in-house lawyer.
+
     footer.footer
       .container
         .footer__wrap.footer-grid

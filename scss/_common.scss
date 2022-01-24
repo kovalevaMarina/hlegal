@@ -1,14 +1,166 @@
+body {
+    font-family: $fm-montserrat;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 $gutter;
+}
+
+.flex {
+    &-d {
+        display: flex;
+    }
+
+    &--center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-align--center {
+        align-items: center;
+    }
+
+    &--between {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--end {
+        justify-content: end;
+        align-items: center;
+    }
+
+    &--column {
+        flex-direction: column;
+    }
+}
+
+.d--sm {
+    display: none;
+}
+
+.d--xs {
+    display: flex;
+}
+
+.title {
+    &-h1 {
+        font-size: $fs-h1;
+        line-height: $h1-ln-height;
+    }
+
+    &-h2 {
+        font-size: $fs-h2;
+        line-height: $h2-ln-height;
+    }
+
+    &-h3 {
+        font-size: $fs-h3;
+        line-height: $h3-ln-height;
+    }
+}
+
 .txt {
-    // txt colors
+    &--main {
+       font-size: $txt-md;
+       line-height: $h4-ln-height; 
+    }
+
+    &--caps {
+        font-size: $fs-h3-caps;
+        line-height: $h3-caps-ln-height;
+        color: $blue;
+    }
+
+    &--md {
+        font-size: $txt-md;
+        line-height: $txt-md-ln-height;
+    }
+
+    &--dark {
+        color: $blue-dark;
+    }
+
+    &--blue {
+        color: $blue;
+    }
+
+    &--blue-alt {
+        color: $blue-dark-alt;
+    }
+
+    &--grey {
+        color: $grey-txt;
+    }
+
     &--white {
         color: $white;
     }
-    // font weight
+
+    &--gradient {
+        background: $gradient-txt;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &--normal {
+        font-weight: 400;
+    }
+    
     &--bold {
         font-weight: 700;
     }
-    // txt position
+
     &--center {
         text-align: center;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.icon-fb {
+    &__link {
+    transition: $transition-time;
+        &--white {
+            fill: $white;
+        }
+
+        &--blue {
+            fill: $blue;
+        }
+        &:hover {
+            fill: $red;
+        }
+    }
+}
+
+.arrow {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-right: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    transform: rotate(-45deg);
+    margin-left: 3px;
+    transition: $transition-time;
+}
+
+.heading {
+    margin-bottom: 10px;
+    &__link {
+        transition: $transition-time;
+        &:hover {
+            color: $red;
+        }
+        &:hover .arrow {
+            border-right: 2px solid $red;
+            border-bottom: 2px solid $red; 
+        }
     }
 }

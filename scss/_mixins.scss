@@ -1,0 +1,23 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin circle {
+  position: relative;
+  padding-left: 20px;
+}
+
+@mixin circleBefore {
+  content: '';
+  position: absolute;
+  left: 7px;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 3px;
+  border-radius: 50%;
+}

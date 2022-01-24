@@ -269,6 +269,66 @@
   }
 }
 
+.team {
+  margin-bottom: 60px;
+  &__wrap {
+    padding-top: 30px;
+  }
+
+  &__content {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-color: $grey-bg;
+  }
+
+  &-img {
+    height: 500px;
+    &__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  &-info {
+    padding: 30px;
+    &__title {
+      overflow-wrap: break-word;
+      margin-bottom: 30px;
+    }
+
+    &__author {
+      &-name {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__btn {
+    &-circle {
+      width: 16px;
+      height: 16px;
+      background-color: $blue;
+      opacity: 0.2;
+      border-radius: 50%;
+      margin-right: 15px;
+      transition: $transition-time;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .footer {
   &-grid {
     display: grid;

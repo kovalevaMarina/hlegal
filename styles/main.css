@@ -569,6 +569,66 @@ body {
   color: #f0145a;
 }
 
+.team {
+  margin-bottom: 60px;
+}
+
+.team__wrap {
+  padding-top: 30px;
+}
+
+.team__content {
+  margin-bottom: 30px;
+  border-radius: 12px;
+  background-color: #f5f5fa;
+}
+
+.team-img {
+  height: 500px;
+}
+
+.team-img__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.team-info {
+  padding: 30px;
+}
+
+.team-info__title {
+  overflow-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+.team-info__author-name {
+  margin-bottom: 6px;
+}
+
+.team__btn-circle {
+  width: 16px;
+  height: 16px;
+  background-color: #24a3ff;
+  opacity: 0.2;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: 0.3s ease;
+}
+
+.team__btn-circle:last-child {
+  margin-right: 0;
+}
+
+.team__btn-circle:hover {
+  opacity: 1;
+}
+
+.team__btn-circle--active {
+  opacity: 1;
+}
+
 .footer-grid {
   display: grid;
   gap: 21px;

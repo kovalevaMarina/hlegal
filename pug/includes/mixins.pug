@@ -1,5 +1,5 @@
 //- for header block
-mixin langItem(langName, langClass)
+mixin langItem (langName, langClass)
   li.lang-list__item(class= langClass)
     a.lang-list__link.txt--uppercase.txt--white.txt--bold(href="#")= langName
 
@@ -14,3 +14,8 @@ mixin serviceItem (iconName, titleName, text)
     h3.title-h3.services-list__title.txt--bold
       a(href="#").services-list__title--link.txt--blue= titleName
     block
+
+mixin headingTitle (titleName)
+  .heading
+    a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.flex-d.flex-align--center= titleName
+      span.arrow

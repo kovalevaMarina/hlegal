@@ -67,9 +67,7 @@ html(lang="en")
 
       section.services
         .container
-          .heading
-            a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.flex-d.flex-align--center Services
-              span.arrow
+          +headingTitle('Services')
           h2.title-h1.services__title.txt--bold.txt--gradient What can we do better than others?
           ul.services-list
             +serviceItem('ecommerce', 'IT and e-commerce')
@@ -102,6 +100,23 @@ html(lang="en")
                 Is it a small, medium-sized company or a market leader? Local business or 
                 multinational company? Do you have your own legal department or not?
     
+    section.team
+      .container
+        .team__wrap
+          .team__content
+            .team-img
+              img.team-img__photo(src="./assets/img/team_1.jpg", alt="Фото главного руководителя компании")
+            .team-info
+              +headingTitle('Команда')
+              h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+              .team-info__author
+                p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
+                p.txt--main.txt--grey Керуючий партнер
+          .team__btn.flex--center
+            button.team__btn-circle.team__btn-circle--active
+            button.team__btn-circle
+            button.team__btn-circle
+
     footer.footer
       .container
         .footer__wrap.footer-grid

@@ -411,8 +411,8 @@ body {
 
 .header-space {
   background-color: rgba(245, 245, 250, 0.2);
-  margin: -10px -15px 0 -15px;
-  padding: 10px 10px 0 10px;
+  margin: -10px -15px 0px -15px;
+  padding: 10px 15px 15px 15px;
 }
 
 .header__wrap {
@@ -530,6 +530,23 @@ body {
 
 .menu-btn__burger::after {
   transform: translateY(6px);
+}
+
+.advantages__wrap {
+  padding: 30px 0;
+}
+
+.advantages-info__title {
+  margin-bottom: 30px;
+}
+
+.advantages-info__txt {
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.services__title {
+  margin-bottom: 15px;
 }
 
 .services-list__img {

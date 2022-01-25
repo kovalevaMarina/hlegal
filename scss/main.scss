@@ -329,6 +329,43 @@
   }
 }
 
+.clients {
+  &__title {
+    color: $blue-dark;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    &__item {
+      height: 120px;
+      padding: 10px;
+      &-hillel {
+        background-color: $blue-dark-bg;
+      }
+
+      &-wannabiz {
+        background-color: $green-dark-bg;
+      }
+
+      &-tapgerine {
+        background-color: $orange-bg;
+      }
+
+      &-3dlook {
+        background-color: $purple-bg;
+      }
+
+      &-orangear {
+        background-color: $orange-2-bg;
+      }
+
+      &-adtelligent {
+        background-color: $grey-white-bg;
+      }
+    }
+  }
+}
+
 .footer {
   &-grid {
     display: grid;

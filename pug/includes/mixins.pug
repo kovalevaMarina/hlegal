@@ -1,4 +1,3 @@
-//- for header block
 mixin langItem (langName, langClass)
   li.lang-list__item(class= langClass)
     a.lang-list__link.txt--uppercase.txt--white.txt--bold(href="#")= langName
@@ -17,5 +16,9 @@ mixin serviceItem (iconName, titleName, text)
 
 mixin headingTitle (titleName)
   .heading
-    a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.flex-d.flex-align--center= titleName
+    a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.txt--blue.flex-d.flex-align--center= titleName
       span.arrow
+
+mixin clientsItem (clientClass, logoClient, altText)
+  li.clients-list__item(class= clientClass).flex--center
+    img(src="./assets/img/" + logoClient + ".png", alt= altText)

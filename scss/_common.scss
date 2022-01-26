@@ -75,6 +75,11 @@ body {
         line-height: $h3-caps-ln-height;
     }
 
+    &--caps-md {
+        font-size: $fs-h3-caps;
+        line-height: $txt-caps-ln-height;
+    }
+
     &--md {
         font-size: $txt-md;
         line-height: $txt-md-ln-height;
@@ -86,6 +91,10 @@ body {
 
     &--blue {
         color: $blue;
+    }
+
+    &--black {
+        color: $black;
     }
 
     &--blue-alt {

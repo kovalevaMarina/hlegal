@@ -215,6 +215,11 @@ body {
   line-height: 17px;
 }
 
+.txt--caps-md {
+  font-size: 14px;
+  line-height: 22px;
+}
+
 .txt--md {
   font-size: 16px;
   line-height: 26px;
@@ -226,6 +231,10 @@ body {
 
 .txt--blue {
   color: #24a3ff;
+}
+
+.txt--black {
+  color: #000000;
 }
 
 .txt--blue-alt {
@@ -660,6 +669,58 @@ body {
 
 .clients-list__item-adtelligent {
   background-color: #e2e2e4;
+}
+
+.publications {
+  background-color: #f5f5fa;
+}
+
+.publications__wrap {
+  padding: 30px 0;
+  border-bottom: 2px solid #e6e6f0;
+}
+
+.publications__title {
+  margin-bottom: 15px;
+}
+
+.publications-list__item {
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.publications-list__img {
+  height: 200px;
+}
+
+.publications-list__img--photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.publications-list__info {
+  padding: 30px;
+}
+
+.publications-list__info-title {
+  margin-bottom: 15px;
+}
+
+.publications-list__info-date {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 15px;
+}
+
+.publications-list__info-txt {
+  padding-top: 15px;
+  border-top: 4px solid #e6e6f0;
+}
+
+.footer {
+  background-color: #f5f5fa;
 }
 
 .footer-grid {

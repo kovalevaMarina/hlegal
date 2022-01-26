@@ -68,7 +68,7 @@ html(lang="en")
       section.services
         .container
           +headingTitle('Services')
-          h2.title-h1.services__title.txt--bold.txt--gradient What can we do better than others?
+          h2.title-h2.services__title.txt--bold.txt--gradient What can we do better than others?
           ul.services-list
             +serviceItem('ecommerce', 'IT and e-commerce')
               p.services-list__txt.txt--md.txt--white.
@@ -120,12 +120,29 @@ html(lang="en")
       .container
         h3.clients__title.txt--caps.txt--uppercase.txt--bold.txt--center They already trust us
       ul.clients-list
-        +clientsItem('clients-list__item-hillel', 'hillel', 'Icon logo Hillel')
-        +clientsItem('clients-list__item-wannabiz', 'wannabiz', 'Icon logo Wannabiz')
-        +clientsItem('clients-list__item-tapgerine', 'tapgerine', 'Icon logo Tapgerine')
-        +clientsItem('clients-list__item-3dlook', '3dlook', 'Icon logo 3dlook')
-        +clientsItem('clients-list__item-orangear', 'orangear', 'Icon logo orangear')
-        +clientsItem('clients-list__item-adtelligent', 'adtelligent', 'Icon logo adtelligent')
+        +clientsItem('clients-list__item-hillel', 'hillel.svg', 'Icon logo Hillel')
+        +clientsItem('clients-list__item-wannabiz', 'wannabiz.png', 'Icon logo Wannabiz')
+        +clientsItem('clients-list__item-tapgerine', 'tapgerine.png', 'Icon logo Tapgerine')
+        +clientsItem('clients-list__item-3dlook', '3dlook.png', 'Icon logo 3dlook')
+        +clientsItem('clients-list__item-orangear', 'orangear.png', 'Icon logo orangear')
+        +clientsItem('clients-list__item-adtelligent', 'adtelligent.png', 'Icon logo adtelligent')
+    section.publications
+      .container
+        .publications__wrap
+          +headingTitle('Publications')
+          h2.title-h2.publications__title.txt--bold.txt--gradient We have something to tell
+          ul.publications-list
+            +publicationsItem('publication_associate.jpg', 'Picture publication equity associate', 'Equity associate', 'April 22')
+              p.publications-list__info-txt.txt--caps-md.txt--black.
+                I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering 
+                my parents told me that if I…
+            +publicationsItem('publication_gdpr.jpg', 'Picture publication GPDR', 'Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR', 'September 29')
+              p.publications-list__info-txt.txt--caps-md.txt--black.
+                And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+            +publicationsItem('publication_testament.jpg', 'Picture publication millennial testament', 'Millennial Testament', 'August 19')
+              p.publications-list__info-txt.txt--caps-md.txt--black.
+                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation 
+                X looks like this: an apartment in…
 
     footer.footer
       .container

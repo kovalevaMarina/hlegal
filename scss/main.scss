@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&display=swap');
 @import "./var";
 @import "./reset";
+@import "./mixins";
 @import "./common";
 
 .section-gradient {
@@ -99,8 +100,8 @@
 
   &-space {
     background-color: $grey-space;
-    margin: -10px -15px 0 -15px;
-    padding: 10px 10px 0 10px;
+    margin: -10px -15px 0px -15px;
+    padding: 10px 15px 15px 15px;
   }
 
   &__wrap {
@@ -226,7 +227,32 @@
   }
 }
 
+.advantages {
+  &__wrap {
+    padding: 30px 0;
+  }
+
+  &-info {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__txt {
+      font-size: $txt-xl;
+      line-height: $txt-xl-ln-height;
+    }
+  }
+} 
+
 .services {
+  &__wrap {
+    padding-bottom: 45px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
   &-list {
     &__img {
       width: 92px;
@@ -248,7 +274,180 @@
   }
 }
 
+.team {
+  margin-bottom: 60px;
+  &__wrap {
+    padding-top: 30px;
+  }
+
+  &-list {
+    &__item {
+      margin-bottom: 30px;
+      border-radius: 12px;
+      background-color: $grey-bg;
+    }  
+  }
+
+  &-img {
+    width: 100%;
+    height: 500px;
+    &__photo {
+      @extend %images;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  &-info {
+    padding: 30px;
+    &__title {
+      overflow-wrap: break-word;
+      margin-bottom: 30px;
+    }
+
+    &__author {
+      &-name {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__btn {
+    &-circle {
+      width: 16px;
+      height: 16px;
+      background-color: $blue;
+      opacity: 0.2;
+      border-radius: 50%;
+      margin-right: 15px;
+      transition: $transition-time;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.clients {
+  &__title {
+    color: $blue-dark;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    &__item {
+      height: 120px;
+      padding: 10px;
+      width: 100%;
+      &-img {
+        height: 100%;
+      }
+
+      &-hillel {
+        background-color: $blue-dark-bg;
+      }
+
+      &-wannabiz {
+        background-color: $green-dark-bg;
+      }
+
+      &-tapgerine {
+        background-color: $orange-bg;
+      }
+
+      &-3dlook {
+        background-color: $purple-bg;
+      }
+
+      &-orangear {
+        background-color: $orange-2-bg;
+      }
+
+      &-adtelligent {
+        background-color: $grey-white-bg;
+      }
+
+      &-clickky {
+        background-color: $burgundy-bg;
+      }
+
+      &-ecolease {
+        background-color: $cyan-light-bg;
+      }
+
+      &-infratek {
+        background-color: $grey-bg;
+      }
+
+      &-citypark {
+        background-color: $tolopea-bg;
+      }
+
+      &-artprint {
+        background-color: $blue-regal-bg;
+      }
+
+      &-ultimatecard {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.publications {
+  background-color: $grey-bg;
+  &__wrap {
+    padding: 30px 0;
+    border-bottom: 2px solid $grey-separator;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &-list {
+    &__item {
+      border-radius: 8px;
+      background-color: $white;
+    }
+
+    &__img {
+      height: 200px;
+      &--photo {
+        @extend %images;
+        border-radius: 8px 8px 0px 0px;
+      }
+    }
+
+    &__info {
+      padding: 30px;
+      &-title {
+        margin-bottom: 15px;
+      }
+
+      &-date {
+        font-size: $txt-sm;
+        line-height: $txt-sm-ln-height;
+        margin-bottom: 15px;
+      }
+
+      &-txt {
+        padding-top: 15px;
+        border-top: 4px solid $grey-separator;
+      }
+    }
+  }
+}
+
 .footer {
+  background-color: $grey-bg;
   &-grid {
     display: grid;
     gap: 21px;
@@ -310,5 +509,5 @@
     }
   }
 }
-@import "./mixins";
+
 @import "./media";

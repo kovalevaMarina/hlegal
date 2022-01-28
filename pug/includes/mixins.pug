@@ -7,7 +7,7 @@ mixin navItem (navName)
     a(href="#").txt--main.txt--bold.txt--white.nav-list__link= navName
 
 mixin serviceItem (iconName, serviceTitel)
-  li.services-list__item
+  .services-list__item
     .services-list__img.flex--center
       object.services-list__img--icon(data="./assets/svg/" + iconName + ".svg")
     h3.title-h3.services-list__title.txt--bold
@@ -19,12 +19,13 @@ mixin headingTitle (titleName)
     a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.txt--blue.flex-d.flex-align--center= titleName
       span.arrow
 
-mixin clientsItem (clientClass, logoClient, clientAlt)
-  li.clients-list__item(class= clientClass).flex--center
-    img(src="./assets/img/" + logoClient, alt= clientAlt)
+mixin clientsItem (clientClass, logoClient, clientAlt, noneClass)
+  .clients-list__item(class= clientClass,class= noneClass)
+    .clients-list__item-img.flex--center
+      img(src="./assets/img/" + logoClient, alt= clientAlt)
 
 mixin publicationsItem (publicImg, publicAlt, publicTitle, publicDate)
-  li.publications-list__item
+  .publications-list__item
     .publications-list__img
       img.publications-list__img--photo(src="./assets/img/" + publicImg, alt= publicAlt)
     .publications-list__info

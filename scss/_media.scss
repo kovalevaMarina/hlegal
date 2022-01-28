@@ -21,7 +21,8 @@
 
     &-space {
       background-color: transparent;
-      @include reset;
+      margin: 0;
+      padding: 0;
     }
 
     &-grid {
@@ -44,10 +45,9 @@
 
   .contact-list {
     &__item {
-      @include circle;
+      @include circle(18px);
       &::before {
-        @include circleBefore;
-        background-color: $grey-separator;
+        @include circleBefore(6px, $grey-separator);
       }
     }
   }
@@ -70,10 +70,9 @@
         }
 
         & + & {
-          @include circle;
+          @include circle(26px);
           &::before {
-            @include circleBefore;
-            background-color: $grey-txt;
+            @include circleBefore(12px, $grey-txt);
           }
         }
       }
@@ -89,10 +88,9 @@
       }
 
       &__item + &__item {
-        @include circle;
+        @include circle(26px);
         &::before {
-          @include circleBefore;
-          background-color: $grey-txt;
+          @include circleBefore(12px, $grey-txt);
         } 
       }
     }

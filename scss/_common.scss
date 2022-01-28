@@ -4,9 +4,26 @@ body {
 }
 
 .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 $gutter;
+    @include container-size(1320px, 0 15px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    padding: $gutter;
+}
+
+.m-15 {
+    margin: -15px;
+}
+
+@for $i from 1 through $gd-col {
+    .col-#{$i} {
+      @include col-size($gd-size * $i);
+    }
 }
 
 .flex {

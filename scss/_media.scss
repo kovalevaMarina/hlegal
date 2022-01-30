@@ -1,4 +1,18 @@
+@media (min-width: $xs) {
+  @for $i from 1 through $gd-col {
+    .col-xs-#{$i} {
+      @include col-size($gd-size * $i);
+    }
+  }
+}
+
 @media (min-width: $sm) {
+  @for $i from 1 through $gd-col {
+    .col-sm-#{$i} {
+      @include col-size($gd-size * $i);
+    }
+  }
+
   .d--sm {
     display: block;
   }
@@ -49,6 +63,18 @@
       &::before {
         @include circleBefore(6px, $grey-separator);
       }
+    }
+  }
+
+  .services {
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  .publications {
+    &__title {
+      margin-bottom: 30px;
     }
   }
 

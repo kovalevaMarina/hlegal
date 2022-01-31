@@ -544,6 +544,11 @@ body {
   line-height: 27px;
 }
 
+.title-h4 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .txt--main {
   font-size: 16px;
   line-height: 20px;
@@ -876,13 +881,51 @@ body {
   padding: 30px 0;
 }
 
-.advantages-info__title {
+.advantages__title {
   margin-bottom: 30px;
 }
 
-.advantages-info__txt {
+.advantages__txt {
   font-size: 19px;
   line-height: 30px;
+}
+
+.advantages .carousel-indicators {
+  position: static;
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages .carousel-indicators__inner {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 30px;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.advantages .carousel-indicators [data-bs-target] {
+  white-space: nowrap;
+}
+
+.advantages .carousel-indicators__button {
+  width: 100%;
+  height: auto;
+  text-indent: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+  padding-right: 30px;
+}
+
+.advantages .carousel-indicators .active .title-h2 {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .services__wrap {

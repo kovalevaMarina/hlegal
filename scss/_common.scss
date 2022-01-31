@@ -82,12 +82,17 @@ body {
 		font-size: $fs-h3;
 		line-height: $h3-ln-height;
 	}
+
+  &-h4 {
+    font-size: $fs-h4;
+    line-height: $h4-ln-height;
+  }
 }
 
 .txt {
 	&--main {
 	   font-size: $txt-md;
-	   line-height: $h4-ln-height; 
+	   line-height: $txt-ln-height; 
 	}
 
 	&--caps {

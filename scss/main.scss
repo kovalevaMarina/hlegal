@@ -1,3 +1,4 @@
+@import "./bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Serif&family=Roboto&display=swap');
 @import "./var";
 @import "./reset";
@@ -100,12 +101,8 @@
 
   &-space {
     background-color: $grey-space;
-    margin: -10px -15px 0px -15px;
+    margin: 0 -15px 0 -15px;
     padding: 10px 15px 15px 15px;
-  }
-
-  &__wrap {
-    padding-top: 10px;
   }
 
   &-grid {
@@ -160,11 +157,8 @@
 }
 
 .nav-list {
-  &__item {
+  &__item:not(:last-child) {
     margin-right: 15px;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   &__link {
@@ -280,12 +274,28 @@
     padding-top: 30px;
   }
 
-  &-list {
-    &__item {
-      margin-bottom: 30px;
-      border-radius: 12px;
-      background-color: $grey-bg;
-    }  
+  .carousel-item {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-color: $grey-bg; 
+  }
+
+  .carousel-indicators {
+    position: static;
+    margin-bottom: 0;
+    [data-bs-target] {
+      width: 16px;
+      height: 16px;
+      background-color: $blue;
+      border-radius: 50%;
+      margin: 0 15px 0 0;
+      border: none;
+      opacity: 0.2;
+    }
+  
+    .active {
+      opacity: 1;
+    }
   }
 
   &-img {
@@ -307,29 +317,6 @@
     &__author {
       &-name {
         margin-bottom: 6px;
-      }
-    }
-  }
-
-  &__btn {
-    &-circle {
-      width: 16px;
-      height: 16px;
-      background-color: $blue;
-      opacity: 0.2;
-      border-radius: 50%;
-      margin-right: 15px;
-      transition: $transition-time;
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &--active {
-        opacity: 1;
       }
     }
   }

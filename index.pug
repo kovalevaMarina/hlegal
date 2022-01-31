@@ -8,6 +8,7 @@ html(lang="en")
     link(rel="stylesheet", href="./styles/main.css")
   body
     include ./pug/includes/mixins.pug
+
     .section-gradient
       .section-gradient__shadow.section-gradient__shadow--first
       .section-gradient__shadow.section-gradient__shadow--second
@@ -17,39 +18,38 @@ html(lang="en")
         .main-section
           header.header
             .container
-              .header__wrap
-                .header-grid
-                  .header-grid__logo
-                    a(href="./index.html").logo.logo__wrap
-                      include ./pug/includes/logo.pug
-                  .header-grid__contact.header-space.flex-d.header-flex
-                    ul.lang-list.flex-d.flex-align--center
-                      +langItem('Ук')
-                      +langItem('Ру')
-                      +langItem('En', 'lang-list__item--active')
-                    ul.contact-list.header-contact.flex-d.flex-align--center
-                      li.contact-list__item.d--sm
-                        a(href="https://goo.gl/maps/NM6RguTph8YZTya29" target='_blank').txt--main.txt--white Kyiv, Mechnikova str., 14/1
-                      li.contact-list__item
-                        a(href="tel:0800211927").txt--main.txt--bold.txt--white 0800 211 927
-                      li.contact-list__item.d--sm
-                        a(href="#").contact-list__link--icon
-                          svg.icon-fb__link.icon-fb__link--white(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
-                            g(clip-path='url(#clip0_25631_2608)')
-                              path(d='M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z')
-                            defs
-                              clippath#clip0_25631_2608
-                                rect(width='24' height='24' transform='translate(0 0.5)')
-                  .header-grid__nav.flex-d.header-flex__nav
-                    button.menu-btn.flex--center.d--xs
-                      .menu-btn__burger
-                    nav.nav.d--sm
-                      ul.nav-list.flex-d
-                        +navItem('about us')
-                        +navItem('services')
-                        +navItem('team')
-                        +navItem('publications')
-                        +navItem('contact')
+              .header-grid
+                .header-grid__logo
+                  a(href="./index.html").logo.logo__wrap
+                    include ./pug/includes/logo.pug
+                .header-grid__contact.header-space.flex-d.header-flex
+                  ul.lang-list.flex-d.flex-align--center
+                    +langItem('Ук')
+                    +langItem('Ру')
+                    +langItem('En', 'lang-list__item--active')
+                  ul.contact-list.header-contact.flex-d.flex-align--center
+                    li.contact-list__item.d--sm
+                      a(href="https://goo.gl/maps/NM6RguTph8YZTya29" target='_blank').txt--main.txt--white Kyiv, Mechnikova str., 14/1
+                    li.contact-list__item
+                      a(href="tel:0800211927").txt--main.txt--bold.txt--white 0800 211 927
+                    li.contact-list__item.d--sm
+                      a(href="#").contact-list__link--icon
+                        svg.icon-fb__link.icon-fb__link--white(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          g(clip-path='url(#clip0_25631_2608)')
+                            path(d='M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z')
+                          defs
+                            clippath#clip0_25631_2608
+                              rect(width='24' height='24' transform='translate(0 0.5)')
+                .header-grid__nav.flex-d.header-flex__nav
+                  button.menu-btn.flex--center.d--xs
+                    .menu-btn__burger
+                  nav.nav.d--sm
+                    ul.nav-list.flex-d
+                      +navItem('about us')
+                      +navItem('services')
+                      +navItem('team')
+                      +navItem('publications')
+                      +navItem('contact')
           main.main-section__title
             .container
               h1.title-h1.txt--white.txt--bold.txt--center you legal solutions provider
@@ -111,20 +111,40 @@ html(lang="en")
     section.team
       .container
         .team__wrap
-          .team-list
-            .team-list__item
-              .team-img
-                img.team-img__photo(src="./assets/img/team_1.jpg", alt="Фото главного руководителя компании")
-              .team-info
-                +headingTitle('Команда')
-                h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-                .team-info__author
-                  p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
-                  p.txt--main.txt--grey Керуючий партнер
-          .team__btn.flex--center
-            button.team__btn-circle.team__btn-circle--active
-            button.team__btn-circle
-            button.team__btn-circle
+          #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner
+              .carousel-item.active(data-bs-interval="3000")
+                .team-img
+                  img.team-img__photo(src="./assets/img/team_alexandrovsky.jpg", alt="Фото главного руководителя компании")
+                .team-info
+                  +headingTitle('Команда')
+                  h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                  .team-info__author
+                    p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
+                    p.txt--main.txt--grey Керуючий партнер
+              .carousel-item(data-bs-interval="3000")
+                .team-img
+                  img.team-img__photo(src="./assets/img/team_kobzar.jpg", alt="Фото главного руководителя компании")
+                .team-info
+                  +headingTitle('Команда')
+                  h2.title-h2.team-info__title.txt--bold.txt--gradient Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.
+                  .team-info__author
+                    p.team-info__author-name.txt--main.txt--grey.txt--bold Oksana Kobzar
+                    p.txt--main.txt--grey Equity partner, Attorney-at-law
+              .carousel-item(data-bs-interval="3000")
+                .team-img
+                  img.team-img__photo(src="./assets/img/team_binn.jpg", alt="Фото главного руководителя компании")
+                .team-info
+                  +headingTitle('Команда')
+                  h2.title-h2.team-info__title.txt--bold.txt--gradient   Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.
+                  .team-info__author
+                    p.team-info__author-name.txt--main.txt--grey.txt--bold  Sergey Binn
+                    p.txt--main.txt--grey Associate
+            .carousel-indicators
+              button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+              button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
+              button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='2' aria-label='Slide 3')
+    
     section.clients
       .container
         h3.clients__title.txt--caps.txt--uppercase.txt--bold.txt--center They already trust us
@@ -200,3 +220,4 @@ html(lang="en")
                 a(href="mailto:contact@forstudy.space").footer-contact__link.txt--main.txt--bold.txt--blue contact@forstudy.space
           .footer-grid__copyright
             p.txt--main.txt--grey.txt--center © 2021 HLEGAL Law company, LLC
+    script(src='./node_modules/bootstrap/dist/js/bootstrap.min.js')

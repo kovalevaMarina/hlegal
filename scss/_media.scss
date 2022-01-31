@@ -21,11 +21,11 @@
     display: none;
   }
 
-  .header {
-    &__wrap {
-      padding-top: 50px;
-    }
+  .container {
+    @include container-size(1320px, 0 60px);
+  }
 
+  .header {
     &-flex {
       justify-content: flex-start;
       &__nav {
@@ -44,6 +44,7 @@
       'contact'
       'logo'
       'nav';
+      padding-top: 50px;
     }
   }
 
@@ -69,6 +70,12 @@
   .services {
     &__title {
       margin-bottom: 60px;
+    }
+  }
+
+  .team {
+    &__wrap {
+      padding-top: 60px;
     }
   }
 

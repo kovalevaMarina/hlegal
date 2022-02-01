@@ -58,6 +58,27 @@
     }
   }
 
+  .nav {
+    &-list {
+      flex-direction: row;
+      justify-content: flex-start;
+      column-gap: 15px;
+      &__link {
+        font-size: $txt-md;
+	      line-height: $txt-ln-height; 
+        color: $white;
+        display: inline-block;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+        transition: $transition-time;
+        &:hover {
+          color: $red;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+  }
+
   .contact-list {
     &__item {
       @include circle(18px);

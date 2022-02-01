@@ -43,7 +43,9 @@ html(lang="en")
                 .header-grid__nav.flex-d.header-flex__nav
                   button.menu-btn.flex--center.d--xs
                     .menu-btn__burger
-                  nav.nav.d--sm
+                  nav.nav
+                    .nav-close.d--xs
+                      button.nav-close__btn
                     ul.nav-list.flex-d
                       +navItem('about us')
                       +navItem('services')
@@ -248,3 +250,4 @@ html(lang="en")
           .footer-grid__copyright
             p.txt--main.txt--grey.txt--center © 2021 HLEGAL Law company, LLC
     script(src='./node_modules/bootstrap/dist/js/bootstrap.min.js')
+    script(src='./js/main.js')

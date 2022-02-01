@@ -816,20 +816,84 @@ body {
   background-color: rgba(245, 245, 250, 0.2);
 }
 
-.nav-list__item:not(:last-child) {
-  margin-right: 15px;
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 54%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 12px;
+  overflow-y: auto;
+  transform: translateY(100%);
+  color: #24a3ff;
+  background-color: #ffffff;
+  border-radius: 12px 12px 0px 0px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.nav-close {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.nav-close__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-close__btn:hover {
+  background-color: #eaeaea;
+}
+
+.nav-close::after, .nav-close::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  width: 2px;
+  height: 28px;
+  background-color: #ec6f5d;
+}
+
+.nav-close::after {
+  transform: rotate(45deg);
+}
+
+.nav-close::before {
+  transform: rotate(-45deg);
+}
+
+.nav-list {
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-list__item {
+  padding: 7px;
+  margin-bottom: 15px;
+  background-color: #eaeaea;
+  border-radius: 12px;
 }
 
 .nav-list__link {
-  display: inline-block;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
-  transition: 0.3s ease;
+  font-size: 24px;
+  line-height: 29px;
+  color: #24a3ff;
 }
 
 .nav-list__link:hover {
   color: #f0145a;
-  border-bottom: 2px solid #f0145a;
+}
+
+.nav.visible {
+  transform: translateY(0%);
 }
 
 .contact-list__link--icon {
@@ -848,10 +912,15 @@ body {
   width: 32px;
   height: 32px;
   border: none;
+  border-radius: 8px;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: rgba(245, 245, 250, 0.2);
 }
 
 .menu-btn__burger {
@@ -1289,6 +1358,24 @@ body {
   .logo-svg__wrap {
     width: 130px;
     height: 60px;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 15px;
+  }
+  .nav-list__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    display: inline-block;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+  .nav-list__link:hover {
+    color: #f0145a;
+    border-bottom: 2px solid #f0145a;
   }
   .contact-list__item {
     position: relative;

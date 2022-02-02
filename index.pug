@@ -59,19 +59,19 @@ html(lang="en")
             a(href="#services").main-section__scroll
       
       section.advantages
-        .container
+        .container-sm
           .advantages__wrap
-            #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+            #carouselExampleIndicators.carousel.slide.carousel-content(data-bs-ride='carousel')
               .carousel-indicators
                 .carousel-indicators__inner
                   button.carousel-indicators__button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-                    h2.title-h2.txt--grey.txt--bold Consistent
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Consistent
                   button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
-                    h2.title-h2.txt--grey.txt--bold Customer oriented
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Customer oriented
                   button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
-                    h2.title-h2.txt--grey.txt--bold Innovative
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Innovative
                   button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='3' aria-label='Slide 4')
-                    h2.title-h2.txt--grey.txt--bold Business oriented
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Business oriented
               .carousel-inner
                 .carousel-item.active
                   h4.title-h4.advantages__title.txt--bold.txt--white We turn the idea of legal services
@@ -101,37 +101,37 @@ html(lang="en")
             +headingTitle('Services')
             h2.title-h2.services__title.txt--bold.txt--gradient What can we do better than others?
             .services-list.row.m-15
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('ecommerce', 'IT and e-commerce')
                   p.services-list__txt.txt--md.txt--white.
                     An endless stream of contracts, tax issues, labor relations, 
                     corporate papers - legal work distracts you from doing business. 
                     But there is not much work to do to hire an in-house lawyer.
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('support', 'Comprehensive daily legal support')
                   p.services-list__txt.txt--md.txt--white.
                     In addition, over time, the work will become the same type and 
                     uninteresting for a full-time lawyer. And we know very well how 
                     difficult it is to find a good candidate with experience in the field 
                     of information technology in Ukraine.
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('coprorate', 'Structuring corporate relationships')
                   p.services-list__txt.txt--md.txt--white.
                     Instead of just providing legal services, we will hire a lawyer 
                     or a whole team that will fit into the daily life of your company.
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('trust', 'Building contractual relations')
                   p.services-list__txt.txt--md.txt--white.
                     Once a week, or week after month, you have your own lawyer by 
                     your side. Anyone in the company can catch it at the coffee maker and 
                     just talk about current affairs instead of waiting for update status.
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('protection', 'Protection of business, intellectual property')
                   p.services-list__txt.txt--md.txt--white.
                     And all the other time he will work on new diverse projects, so he will 
                     definitely not stop in professional development. One way or another, all 
                     Axon Partners will work for you instead of a corporate lawyer.
-              .column.col-12.col-sm-6
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('court', 'Judicial representation')
                   p.services-list__txt.txt--md.txt--white.
                     Is it a small, medium-sized company or a market leader? Local business or 
@@ -143,32 +143,35 @@ html(lang="en")
           #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
             .carousel-inner
               .carousel-item.active(data-bs-interval="3000")
-                .team-img
-                  img.team-img__photo(src="./assets/img/team_alexandrovsky.jpg", alt="Фото главного руководителя компании")
-                .team-info
-                  +headingTitle('Команда')
-                  h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-                  .team-info__author
-                    p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
-                    p.txt--main.txt--grey Керуючий партнер
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_alexandrovsky.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
+                      p.txt--main.txt--grey Керуючий партнер
               .carousel-item(data-bs-interval="3000")
-                .team-img
-                  img.team-img__photo(src="./assets/img/team_kobzar.jpg", alt="Фото главного руководителя компании")
-                .team-info
-                  +headingTitle('Команда')
-                  h2.title-h2.team-info__title.txt--bold.txt--gradient Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.
-                  .team-info__author
-                    p.team-info__author-name.txt--main.txt--grey.txt--bold Oksana Kobzar
-                    p.txt--main.txt--grey Equity partner, Attorney-at-law
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_kobzar.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold Oksana Kobzar
+                      p.txt--main.txt--grey Equity partner, Attorney-at-law
               .carousel-item(data-bs-interval="3000")
-                .team-img
-                  img.team-img__photo(src="./assets/img/team_binn.jpg", alt="Фото главного руководителя компании")
-                .team-info
-                  +headingTitle('Команда')
-                  h2.title-h2.team-info__title.txt--bold.txt--gradient   Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.
-                  .team-info__author
-                    p.team-info__author-name.txt--main.txt--grey.txt--bold  Sergey Binn
-                    p.txt--main.txt--grey Associate
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_binn.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient   Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold  Sergey Binn
+                      p.txt--main.txt--grey Associate
             .carousel-indicators
               button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
               button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
@@ -178,29 +181,29 @@ html(lang="en")
       .container
         h3.clients__title.txt--caps.txt--uppercase.txt--bold.txt--center They already trust us
       .clients-list.row
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-hillel', 'hillel.svg', 'Icon logo Hillel')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-wannabiz', 'wannabiz.png', 'Icon logo Wannabiz')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-tapgerine', 'tapgerine.png', 'Icon logo Tapgerine')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-3dlook', '3dlook.png', 'Icon logo 3dlook')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-orangear', 'orangear.png', 'Icon logo orangear')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-adtelligent', 'adtelligent.png', 'Icon logo adtelligent')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-clickky', 'clickky.png', 'Icon logo clickky', 'd--sm')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-ecolease', 'ecolease.png', 'Icon logo ecolease', 'd--sm')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-infratek', 'infratek.png', 'Icon logo infratek', 'd--sm')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-citypark', 'citypark.png', 'Icon logo citypark', 'd--sm')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-artprint', 'artprint.png', 'Icon logo artprint', 'd--sm')
-        .col-12.col-xs-6.col-sm-4
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-ultimatecard', 'ultimatecard.png', 'Icon logo ultimatecard', 'd--sm')
     
     section.publications
@@ -209,16 +212,16 @@ html(lang="en")
           +headingTitle('Publications')
           h2.title-h2.publications__title.txt--bold.txt--gradient We have something to tell
           .publications-list.row.m-15
-            .column.col-12.col-sm-6
+            .column.col-12.col-sm-6.col-md-4
               +publicationsItem('publication_associate.jpg', 'Picture publication equity associate', 'Equity associate', 'April 22')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering 
                   my parents told me that if I…
-            .column.col-12.col-sm-6
+            .column.col-12.col-sm-6.col-md-4
               +publicationsItem('publication_gdpr.jpg', 'Picture publication GPDR', 'Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR', 'September 29')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
-            .column.col-12
+            .column.col-12.col-md-4
               +publicationsItem('publication_testament.jpg', 'Picture publication millennial testament', 'Millennial Testament', 'August 19')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation 

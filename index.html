@@ -102,22 +102,22 @@
         </div>
       </div>
       <section class="advantages">
-        <div class="container">
+        <div class="container-sm">
           <div class="advantages__wrap">
-            <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+            <div class="carousel slide carousel-content" id="carouselExampleIndicators" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <div class="carousel-indicators__inner">
                   <button class="carousel-indicators__button active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                    <h2 class="title-h2 txt--grey txt--bold">Consistent</h2>
+                    <h2 class="title-h2 carousel-title txt--grey txt--bold">Consistent</h2>
                   </button>
                   <button class="carousel-indicators__button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
-                    <h2 class="title-h2 txt--grey txt--bold">Customer oriented</h2>
+                    <h2 class="title-h2 carousel-title txt--grey txt--bold">Customer oriented</h2>
                   </button>
                   <button class="carousel-indicators__button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
-                    <h2 class="title-h2 txt--grey txt--bold">Innovative</h2>
+                    <h2 class="title-h2 carousel-title txt--grey txt--bold">Innovative</h2>
                   </button>
                   <button class="carousel-indicators__button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
-                    <h2 class="title-h2 txt--grey txt--bold">Business oriented</h2>
+                    <h2 class="title-h2 carousel-title txt--grey txt--bold">Business oriented</h2>
                   </button>
                 </div>
               </div>
@@ -163,7 +163,7 @@
                 <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Services<span class="arrow"></span></a></div>
             <h2 class="title-h2 services__title txt--bold txt--gradient">What can we do better than others?</h2>
             <div class="services-list row m-15">
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/ecommerce.svg"></object>
@@ -176,7 +176,7 @@
                       </p>
                     </div>
               </div>
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/support.svg"></object>
@@ -190,7 +190,7 @@
                       </p>
                     </div>
               </div>
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/coprorate.svg"></object>
@@ -202,7 +202,7 @@
                       </p>
                     </div>
               </div>
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/trust.svg"></object>
@@ -215,7 +215,7 @@
                       </p>
                     </div>
               </div>
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/protection.svg"></object>
@@ -228,7 +228,7 @@
                       </p>
                     </div>
               </div>
-              <div class="column col-12 col-sm-6">
+              <div class="column col-12 col-sm-6 col-md-4">
                     <div class="services-list__item">
                       <div class="services-list__img flex--center">
                         <object class="services-list__img--icon" data="./assets/svg/court.svg"></object>
@@ -252,35 +252,41 @@
           <div class="carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="3000">
-                <div class="team-img"><img class="team-img__photo" src="./assets/img/team_alexandrovsky.jpg" alt="Фото главного руководителя компании"></div>
-                <div class="team-info">
-                      <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
-                  <h2 class="title-h2 team-info__title txt--bold txt--gradient">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
-                  <div class="team-info__author">
-                    <p class="team-info__author-name txt--main txt--grey txt--bold">Олександр Олександровський</p>
-                    <p class="txt--main txt--grey">Керуючий партнер</p>
+                <div class="carousel-item__inner">
+                  <div class="team-img"><img class="team-img__photo" src="./assets/img/team_alexandrovsky.jpg" alt="Фото главного руководителя компании"></div>
+                  <div class="team-info">
+                        <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
+                    <h2 class="title-h2 team-info__title txt--bold txt--gradient">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                    <div class="team-info__author">
+                      <p class="team-info__author-name txt--main txt--grey txt--bold">Олександр Олександровський</p>
+                      <p class="txt--main txt--grey">Керуючий партнер</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="3000">
-                <div class="team-img"><img class="team-img__photo" src="./assets/img/team_kobzar.jpg" alt="Фото главного руководителя компании"></div>
-                <div class="team-info">
-                      <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
-                  <h2 class="title-h2 team-info__title txt--bold txt--gradient">Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.</h2>
-                  <div class="team-info__author">
-                    <p class="team-info__author-name txt--main txt--grey txt--bold">Oksana Kobzar</p>
-                    <p class="txt--main txt--grey">Equity partner, Attorney-at-law</p>
+                <div class="carousel-item__inner">
+                  <div class="team-img"><img class="team-img__photo" src="./assets/img/team_kobzar.jpg" alt="Фото главного руководителя компании"></div>
+                  <div class="team-info">
+                        <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
+                    <h2 class="title-h2 team-info__title txt--bold txt--gradient">Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.</h2>
+                    <div class="team-info__author">
+                      <p class="team-info__author-name txt--main txt--grey txt--bold">Oksana Kobzar</p>
+                      <p class="txt--main txt--grey">Equity partner, Attorney-at-law</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="3000">
-                <div class="team-img"><img class="team-img__photo" src="./assets/img/team_binn.jpg" alt="Фото главного руководителя компании"></div>
-                <div class="team-info">
-                      <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
-                  <h2 class="title-h2 team-info__title txt--bold txt--gradient">  Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.</h2>
-                  <div class="team-info__author">
-                    <p class="team-info__author-name txt--main txt--grey txt--bold"> Sergey Binn</p>
-                    <p class="txt--main txt--grey">Associate</p>
+                <div class="carousel-item__inner">
+                  <div class="team-img"><img class="team-img__photo" src="./assets/img/team_binn.jpg" alt="Фото главного руководителя компании"></div>
+                  <div class="team-info">
+                        <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Команда<span class="arrow"></span></a></div>
+                    <h2 class="title-h2 team-info__title txt--bold txt--gradient">  Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.</h2>
+                    <div class="team-info__author">
+                      <p class="team-info__author-name txt--main txt--grey txt--bold"> Sergey Binn</p>
+                      <p class="txt--main txt--grey">Associate</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -299,62 +305,62 @@
         <h3 class="clients__title txt--caps txt--uppercase txt--bold txt--center">They already trust us</h3>
       </div>
       <div class="clients-list row">
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-hillel">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/hillel.svg" alt="Icon logo Hillel"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-wannabiz">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/wannabiz.png" alt="Icon logo Wannabiz"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-tapgerine">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/tapgerine.png" alt="Icon logo Tapgerine"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-3dlook">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/3dlook.png" alt="Icon logo 3dlook"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-orangear">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/orangear.png" alt="Icon logo orangear"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-adtelligent">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/adtelligent.png" alt="Icon logo adtelligent"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-clickky d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/clickky.png" alt="Icon logo clickky"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-ecolease d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/ecolease.png" alt="Icon logo ecolease"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-infratek d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/infratek.png" alt="Icon logo infratek"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-citypark d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/citypark.png" alt="Icon logo citypark"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-artprint d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/artprint.png" alt="Icon logo artprint"></div>
               </div>
         </div>
-        <div class="col-12 col-xs-6 col-sm-4">
+        <div class="col-12 col-xs-6 col-sm-4 col-md-3">
               <div class="clients-list__item clients-list__item-ultimatecard d--sm">
                 <div class="clients-list__item-img flex--center"><img src="./assets/img/ultimatecard.png" alt="Icon logo ultimatecard"></div>
               </div>
@@ -367,11 +373,11 @@
               <div class="heading"><a class="heading__link txt--caps txt--bold txt--uppercase txt--blue flex-d flex-align--center" href="#">Publications<span class="arrow"></span></a></div>
           <h2 class="title-h2 publications__title txt--bold txt--gradient">We have something to tell</h2>
           <div class="publications-list row m-15">
-            <div class="column col-12 col-sm-6">
+            <div class="column col-12 col-sm-6 col-md-4">
                   <div class="publications-list__item">
                     <div class="publications-list__img"><img class="publications-list__img--photo" src="./assets/img/publication_associate.jpg" alt="Picture publication equity associate"></div>
                     <div class="publications-list__info">
-                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue"></h4>
+                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue">Equity associate</h4>
                       <p class="publications-list__info-date txt--uppercase txt--grey txt--bold">April 22</p>
                       <p class="publications-list__info-txt txt--caps-md txt--black">
                         I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering 
@@ -380,21 +386,21 @@
                     </div>
                   </div>
             </div>
-            <div class="column col-12 col-sm-6">
+            <div class="column col-12 col-sm-6 col-md-4">
                   <div class="publications-list__item">
                     <div class="publications-list__img"><img class="publications-list__img--photo" src="./assets/img/publication_gdpr.jpg" alt="Picture publication GPDR"></div>
                     <div class="publications-list__info">
-                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue"></h4>
+                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4>
                       <p class="publications-list__info-date txt--uppercase txt--grey txt--bold">September 29</p>
                       <p class="publications-list__info-txt txt--caps-md txt--black">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
                     </div>
                   </div>
             </div>
-            <div class="column col-12">
+            <div class="column col-12 col-md-4">
                   <div class="publications-list__item">
                     <div class="publications-list__img"><img class="publications-list__img--photo" src="./assets/img/publication_testament.jpg" alt="Picture publication millennial testament"></div>
                     <div class="publications-list__info">
-                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue"></h4>
+                      <h4 class="publications-list__info-title txt--main txt--bold txt--blue">Millennial Testament</h4>
                       <p class="publications-list__info-date txt--uppercase txt--grey txt--bold">August 19</p>
                       <p class="publications-list__info-txt txt--caps-md txt--black">
                         What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation 

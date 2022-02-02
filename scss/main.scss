@@ -101,8 +101,8 @@
 
   &-space {
     background-color: $grey-space;
-    margin: 0 -15px 0 -15px;
-    padding: 10px 15px 15px 15px;
+    margin: 0 -30px 0 -30px;
+    padding: 10px 30px 15px 30px;
   }
 
   &-grid {
@@ -167,8 +167,8 @@
   z-index: 1;
   padding: 12px;
   overflow-y: auto;
+  opacity: 0;
   transform: translateY(100%);
-  color: $blue;
   background-color: $white;
   border-radius: 12px 12px 0px 0px;
   text-align: center;
@@ -227,6 +227,7 @@
   }
 
   &.visible {
+    opacity: 1;
     transform: translateY(0%);
   }
 }
@@ -287,6 +288,8 @@
 .advantages {
   &__wrap {
     padding: 30px 0;
+    max-width: 1360px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -325,11 +328,12 @@
       background-color: transparent;
       border: none;
       padding-right: 30px;
+      box-sizing: border-box;
     }
 
-    .active .title-h2 {
+    .active .carousel-title {
       background: $gradient-txt;
-		  background-clip: text;
+      background-clip: text;
 		  -webkit-background-clip: text;
 		  -webkit-text-fill-color: transparent;
     }
@@ -373,9 +377,11 @@
   }
 
   .carousel-item {
-    margin-bottom: 30px;
-    border-radius: 12px;
-    background-color: $grey-bg; 
+    &__inner{
+      margin-bottom: 30px;
+      border-radius: 12px;
+      background-color: $grey-bg; 
+    }
   }
 
   .carousel-indicators {

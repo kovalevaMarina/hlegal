@@ -29,6 +29,6 @@ mixin publicationsItem (publicImg, publicAlt, publicTitle, publicDate)
     .publications-list__img
       img.publications-list__img--photo(src="./assets/img/" + publicImg, alt= publicAlt)
     .publications-list__info
-      h4.publications-list__info-title.txt--main.txt--bold.txt--blue
+      h4.publications-list__info-title.txt--main.txt--bold.txt--blue= publicTitle
       p.publications-list__info-date.txt--uppercase.txt--grey.txt--bold= publicDate
       block

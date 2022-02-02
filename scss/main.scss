@@ -557,6 +557,9 @@
 
     &__copyright {
       grid-area: copyright;
+      &-txt {
+        text-align: center;
+      }
     }
   }
 

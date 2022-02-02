@@ -131,6 +131,11 @@
       grid-template-areas:
       'adress copyright' 
       'phone phone';
+      &__copyright {
+        &-txt {
+          text-align: end;
+        }
+      }
     }
 
     &-adress {

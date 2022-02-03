@@ -8,6 +8,7 @@ html(lang="en")
     link(rel="stylesheet", href="./styles/main.css")
   body
     include ./pug/includes/mixins.pug
+
     .section-gradient
       .section-gradient__shadow.section-gradient__shadow--first
       .section-gradient__shadow.section-gradient__shadow--second
@@ -17,91 +18,120 @@ html(lang="en")
         .main-section
           header.header
             .container
-              .header__wrap
-                .header-grid
-                  .header-grid__logo
-                    a(href="./index.html").logo.logo__wrap
-                      include ./pug/includes/logo.pug
-                  .header-grid__contact.header-space.flex-d.header-flex
-                    ul.lang-list.flex-d.flex-align--center
-                      +langItem('Ук')
-                      +langItem('Ру')
-                      +langItem('En', 'lang-list__item--active')
-                    ul.contact-list.header-contact.flex-d.flex-align--center
-                      li.contact-list__item.d--sm
-                        a(href="https://goo.gl/maps/NM6RguTph8YZTya29" target='_blank').txt--main.txt--white Kyiv, Mechnikova str., 14/1
-                      li.contact-list__item
-                        a(href="tel:0800211927").txt--main.txt--bold.txt--white 0800 211 927
-                      li.contact-list__item.d--sm
-                        a(href="#").contact-list__link--icon
-                          svg.icon-fb__link.icon-fb__link--white(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
-                            g(clip-path='url(#clip0_25631_2608)')
-                              path(d='M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z')
-                            defs
-                              clippath#clip0_25631_2608
-                                rect(width='24' height='24' transform='translate(0 0.5)')
-                  .header-grid__nav.flex-d.header-flex__nav
-                    button.menu-btn.flex--center.d--xs
-                      .menu-btn__burger
-                    nav.nav.d--sm
-                      ul.nav-list.flex-d
-                        +navItem('about us')
-                        +navItem('services')
-                        +navItem('team')
-                        +navItem('publications')
-                        +navItem('contact')
+              .header-grid
+                .header-grid__logo
+                  a(href="./index.html").logo.logo__wrap
+                    include ./pug/includes/logo.pug
+                .header-grid__contact.header-space.flex-d.header-flex
+                  ul.lang-list.flex-d.flex-align--center
+                    +langItem('Ук')
+                    +langItem('Ру')
+                    +langItem('En', 'lang-list__item--active')
+                  ul.contact-list.header-contact.flex-d.flex-align--center
+                    li.contact-list__item.d--sm
+                      a(href="https://goo.gl/maps/NM6RguTph8YZTya29" target='_blank').txt--main.txt--white Kyiv, Mechnikova str., 14/1
+                    li.contact-list__item
+                      a(href="tel:0800211927").txt--main.txt--bold.txt--white 0800 211 927
+                    li.contact-list__item.d--sm
+                      a(href="#").contact-list__link--icon
+                        svg.icon-fb__link.icon-fb__link--white(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          g(clip-path='url(#clip0_25631_2608)')
+                            path(d='M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z')
+                          defs
+                            clippath#clip0_25631_2608
+                              rect(width='24' height='24' transform='translate(0 0.5)')
+                .header-grid__nav.flex-d.header-flex__nav
+                  button.menu-btn.flex--center.d--xs
+                    .menu-btn__burger
+                  nav.nav
+                    .nav-close.d--xs
+                      button.nav-close__btn
+                    ul.nav-list.flex-d
+                      +navItem('about us')
+                      +navItem('services')
+                      +navItem('team')
+                      +navItem('publications')
+                      +navItem('contact')
           main.main-section__title
-            h1.title-h1.txt--white.txt--bold.txt--center you legal solutions provider
+            .container
+              h1.title-h1.txt--white.txt--bold.txt--center you legal solutions provider
           .main-section__btn
-            a(href="#services").main-section__scroll
+            a(href="#advantages").main-section__scroll
       
-      .advantages
-        .container
+      section#advantages.advantages
+        .container-sm
           .advantages__wrap
-            .advantages-info
-              h2.title-h2.advantages-info__title.txt--bold.txt--white We turn the idea of legal services
-              p.advantages-info__txt.txt--white.
-                Consolidating many years of experience and practice, the company's lawyers accompany complex 
-                projects and achieve a number of important decisions for the industry. Many of them 
-                form the practice of applying the law of the sea in Ukraine.
+            #carouselExampleIndicators.carousel.slide.carousel-content(data-bs-ride='carousel')
+              .carousel-indicators
+                .carousel-indicators__inner
+                  button.carousel-indicators__button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Consistent
+                  button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Customer oriented
+                  button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Innovative
+                  button.carousel-indicators__button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='3' aria-label='Slide 4')
+                    h2.title-h2.carousel-title.txt--grey.txt--bold Business oriented
+              .carousel-inner
+                .carousel-item.active
+                  h4.title-h4.advantages__title.txt--bold.txt--white We turn the idea of legal services
+                  p.advantages__txt.txt--white.
+                    Consolidating many years of experience and practice, the company's lawyers accompany complex 
+                    projects and achieve a number of important decisions for the industry. Many of them 
+                    form the practice of applying the law of the sea in Ukraine.
+                .carousel-item
+                  h4.title-h4.advantages__title.txt--bold.txt--white We turn the idea of legal customer oriented
+                  p.advantages__txt.txt--white.
+                    Consolidating many years of experience and practice, the company's lawyers accompany complex 
+                    projects and achieve a number of important decisions for the industry.
+                .carousel-item
+                  h4.title-h4.advantages__title.txt--bold.txt--white We turn the idea of legal innovative
+                  p.advantages__txt.txt--white.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perspiciatis architecto 
+                    excepturi rem error dicta atque unde velit minima est.
+                .carousel-item
+                  h4.title-h4.advantages__title.txt--bold.txt--white We turn the idea of customer business oriented
+                  p.advantages__txt.txt--white.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus nam, ex dolore quae illum 
+                    architecto a blanditiis, omnis quas aliquid, culpa pariatur possimus quaerat iste!
 
-      section#services.services
+      section.services
         .container
           .services__wrap
             +headingTitle('Services')
             h2.title-h2.services__title.txt--bold.txt--gradient What can we do better than others?
             .services-list.row.m-15
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('ecommerce', 'IT and e-commerce')
                   p.services-list__txt.txt--md.txt--white.
                     An endless stream of contracts, tax issues, labor relations, 
                     corporate papers - legal work distracts you from doing business. 
                     But there is not much work to do to hire an in-house lawyer.
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('support', 'Comprehensive daily legal support')
                   p.services-list__txt.txt--md.txt--white.
                     In addition, over time, the work will become the same type and 
                     uninteresting for a full-time lawyer. And we know very well how 
                     difficult it is to find a good candidate with experience in the field 
                     of information technology in Ukraine.
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('coprorate', 'Structuring corporate relationships')
                   p.services-list__txt.txt--md.txt--white.
                     Instead of just providing legal services, we will hire a lawyer 
                     or a whole team that will fit into the daily life of your company.
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('trust', 'Building contractual relations')
                   p.services-list__txt.txt--md.txt--white.
                     Once a week, or week after month, you have your own lawyer by 
                     your side. Anyone in the company can catch it at the coffee maker and 
                     just talk about current affairs instead of waiting for update status.
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('protection', 'Protection of business, intellectual property')
                   p.services-list__txt.txt--md.txt--white.
                     And all the other time he will work on new diverse projects, so he will 
                     definitely not stop in professional development. One way or another, all 
                     Axon Partners will work for you instead of a corporate lawyer.
-              .column.col-12
+              .column.col-12.col-sm-6.col-md-4
                 +serviceItem('court', 'Judicial representation')
                   p.services-list__txt.txt--md.txt--white.
                     Is it a small, medium-sized company or a market leader? Local business or 
@@ -110,47 +140,70 @@ html(lang="en")
     section.team
       .container
         .team__wrap
-          .team-list
-            .team-list__item
-              .team-img
-                img.team-img__photo(src="./assets/img/team_1.jpg", alt="Фото главного руководителя компании")
-              .team-info
-                +headingTitle('Команда')
-                h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-                .team-info__author
-                  p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
-                  p.txt--main.txt--grey Керуючий партнер
-          .team__btn.flex--center
-            button.team__btn-circle.team__btn-circle--active
-            button.team__btn-circle
-            button.team__btn-circle
+          #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner
+              .carousel-item.active(data-bs-interval="3000")
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_alexandrovsky.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
+                      p.txt--main.txt--grey Керуючий партнер
+              .carousel-item(data-bs-interval="3000")
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_kobzar.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold Oksana Kobzar
+                      p.txt--main.txt--grey Equity partner, Attorney-at-law
+              .carousel-item(data-bs-interval="3000")
+                .carousel-item__inner
+                  .team-img
+                    img.team-img__photo(src="./assets/img/team_binn.jpg", alt="Фото главного руководителя компании")
+                  .team-info
+                    +headingTitle('Команда')
+                    h2.title-h2.team-info__title.txt--bold.txt--gradient   Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.
+                    .team-info__author
+                      p.team-info__author-name.txt--main.txt--grey.txt--bold  Sergey Binn
+                      p.txt--main.txt--grey Associate
+            .carousel-indicators
+              button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+              button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
+              button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='2' aria-label='Slide 3')
+    
     section.clients
       .container
         h3.clients__title.txt--caps.txt--uppercase.txt--bold.txt--center They already trust us
       .clients-list.row
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-hillel', 'hillel.svg', 'Icon logo Hillel')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-wannabiz', 'wannabiz.png', 'Icon logo Wannabiz')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-tapgerine', 'tapgerine.png', 'Icon logo Tapgerine')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-3dlook', '3dlook.png', 'Icon logo 3dlook')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-orangear', 'orangear.png', 'Icon logo orangear')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-adtelligent', 'adtelligent.png', 'Icon logo adtelligent')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-clickky', 'clickky.png', 'Icon logo clickky', 'd--sm')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-ecolease', 'ecolease.png', 'Icon logo ecolease', 'd--sm')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-infratek', 'infratek.png', 'Icon logo infratek', 'd--sm')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-citypark', 'citypark.png', 'Icon logo citypark', 'd--sm')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-artprint', 'artprint.png', 'Icon logo artprint', 'd--sm')
-        .col-12
+        .col-12.col-xs-6.col-sm-4.col-md-3
           +clientsItem('clients-list__item-ultimatecard', 'ultimatecard.png', 'Icon logo ultimatecard', 'd--sm')
     
     section.publications
@@ -159,16 +212,16 @@ html(lang="en")
           +headingTitle('Publications')
           h2.title-h2.publications__title.txt--bold.txt--gradient We have something to tell
           .publications-list.row.m-15
-            .column.col-12
+            .column.col-12.col-sm-6.col-md-4
               +publicationsItem('publication_associate.jpg', 'Picture publication equity associate', 'Equity associate', 'April 22')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering 
                   my parents told me that if I…
-            .column.col-12
+            .column.col-12.col-sm-6.col-md-4
               +publicationsItem('publication_gdpr.jpg', 'Picture publication GPDR', 'Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR', 'September 29')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
-            .column.col-12
+            .column.col-12.col-md-4
               +publicationsItem('publication_testament.jpg', 'Picture publication millennial testament', 'Millennial Testament', 'August 19')
                 p.publications-list__info-txt.txt--caps-md.txt--black.
                   What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation 
@@ -198,4 +251,6 @@ html(lang="en")
               li.footer-contact__item
                 a(href="mailto:contact@forstudy.space").footer-contact__link.txt--main.txt--bold.txt--blue contact@forstudy.space
           .footer-grid__copyright
-            p.txt--main.txt--grey.txt--center © 2021 HLEGAL Law company, LLC
+            p.footer-grid__copyright-txt.txt--main.txt--grey © 2021 HLEGAL Law company, LLC
+    script(src='./node_modules/bootstrap/dist/js/bootstrap.min.js')
+    script(src='./js/main.js')

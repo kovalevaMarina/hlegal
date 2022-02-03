@@ -127,12 +127,12 @@ table {
   box-sizing: border-box;
 }
 
-a {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
-  cursor: pointer;
 }
 
 button {
   border: none;
+  background-color: transparent;
   cursor: pointer;
 }

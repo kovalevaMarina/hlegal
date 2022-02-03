@@ -1,4 +1,18 @@
+@media (min-width: $xs) {
+  @for $i from 1 through $gd-col {
+    .col-xs-#{$i} {
+      @include col-size($gd-size * $i);
+    }
+  }
+}
+
 @media (min-width: $sm) {
+  @for $i from 1 through $gd-col {
+    .col-sm-#{$i} {
+      @include col-size($gd-size * $i);
+    }
+  }
+
   .d--sm {
     display: block;
   }
@@ -7,11 +21,11 @@
     display: none;
   }
 
-  .header {
-    &__wrap {
-      padding-top: 50px;
-    }
+  .container {
+    @include container-size(1320px, 0 60px);
+  }
 
+  .header {
     &-flex {
       justify-content: flex-start;
       &__nav {
@@ -30,6 +44,7 @@
       'contact'
       'logo'
       'nav';
+      padding-top: 50px;
     }
   }
 
@@ -43,6 +58,33 @@
     }
   }
 
+  .nav {
+    all: initial;
+    &-list {
+      flex-direction: row;
+      justify-content: flex-start;
+      &__item {
+        all: initial;
+        font-family: $fm-montserrat;
+        margin-right: 15px;
+      }
+
+      &__link {
+        font-size: $txt-md;
+	      line-height: $txt-ln-height; 
+        color: $white;
+        display: inline-block;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+        transition: $transition-time;
+        &:hover {
+          color: $red;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+  }
+
   .contact-list {
     &__item {
       @include circle(18px);
@@ -52,11 +94,48 @@
     }
   }
 
+  .advantages {
+    &__wrap {
+      padding: 60px 0;
+    }
+
+    .carousel {
+      &-title {
+        font-size: $fs-h1;
+        line-height: $h1-ln-height;
+        text-align: right;
+      }
+    }
+  }
+
+  .services {
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  .team {
+    &__wrap {
+      padding-top: 60px;
+    }
+  }
+
+  .publications {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
   .footer {
     &-grid {
       grid-template-areas:
       'adress copyright' 
       'phone phone';
+      &__copyright {
+        &-txt {
+          text-align: end;
+        }
+      }
     }
 
     &-adress {
@@ -98,6 +177,12 @@
 }
 
 @media (min-width: $md) {
+  @for $i from 1 through $gd-col {
+    .col-md-#{$i} {
+      @include col-size($gd-size * $i);
+    }
+  }
+
   .header {
     &-grid {
       grid-template-areas:
@@ -110,6 +195,74 @@
       &__nav {
         justify-content: flex-end;
       }
+    }
+  }
+
+  .advantages {
+    .carousel {
+      &-title {
+        margin-bottom: 15px;
+      }
+
+      &-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-indicators {
+        margin: 0;
+        &__inner {
+          flex-direction: column;
+          overflow-x: hidden;
+          border-bottom: none;
+          padding: 0;
+        }
+
+        &__button {
+          position: relative;
+          padding-right: 60px;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: rgba($white, 0.3);
+            right: 0;
+            top: 0;
+            transition: $transition-time;
+          }
+
+          &.active::after {
+            background-color: $red;
+          }
+        }
+      }
+
+      &-inner {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .team {
+    .carousel-item {
+      &__inner {
+        display: flex;
+      }
+    }
+
+    &-img {
+      max-width: 400px;
+      height: 344px;
+      &__photo {
+        border-radius: 12px 0px 0px 12px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }

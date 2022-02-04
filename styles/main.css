@@ -1348,7 +1348,7 @@ body {
     display: none;
   }
   .container {
-    max-width: 1320px;
+    max-width: 1600px;
     padding: 0 60px;
     margin: 0 auto;
   }
@@ -1577,5 +1577,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-lg {
+    max-width: 1720px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .clients {
+    margin-bottom: 60px;
+  }
+  .clients-list__item-hillel {
+    border-radius: 12px 0 0 0;
+  }
+  .clients-list__item-3dlook {
+    border-radius: 0 12px 0 0;
+  }
+  .clients-list__item-infratek {
+    border-radius: 0 0 0 12px;
+  }
+  .clients-list__item-ultimatecard {
+    border-radius: 0 0 12px 0;
   }
 }

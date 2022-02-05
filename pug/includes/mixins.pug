@@ -2,9 +2,9 @@ mixin langItem (langName, langClass)
   li.lang-list__item(class= langClass)
     button.lang-list__link.txt--uppercase.txt--white.txt--bold(href="#")= langName
 
-mixin navItem (navName)
+mixin navItem (navHref, navName)
   li.nav-list__item
-    a(href="#").txt--bold.nav-list__link= navName
+    a(href= navHref).txt--bold.nav-list__link= navName
 
 mixin serviceItem (iconName, serviceTitel)
   .services-list__item

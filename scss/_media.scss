@@ -22,7 +22,7 @@
   }
 
   .container {
-    @include container-size(1320px, 0 60px);
+    @include container-size(1600px, 0 60px);
   }
 
   .header {
@@ -263,6 +263,35 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: $xl) {
+  .container-lg {
+    @include container-size(1720px, 0px);
+  }
+
+  .clients {
+    margin-bottom: 60px;
+    &-list {
+      &__item {
+        &-hillel {
+          border-radius: 12px 0 0 0;
+        }
+
+        &-3dlook {
+          border-radius: 0 12px 0 0;
+        }
+
+        &-infratek {
+          border-radius: 0 0 0 12px;
+        }
+
+        &-ultimatecard {
+          border-radius: 0 0 12px 0;
+        }
+      }
     }
   }
 }

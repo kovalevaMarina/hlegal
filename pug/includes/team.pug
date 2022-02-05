@@ -1,0 +1,41 @@
+section.team
+  .container
+    .team__wrap
+      #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+        .carousel-inner
+          .carousel-item.active(data-bs-interval="3000")
+            .carousel-item__inner
+              .team-img
+                img.team-img__photo(src="./assets/img/team_alexandrovsky.jpg", alt="Photo Alexander Alexandrovsky")
+              .team-info
+                +headingTitle('Команда')
+                h2.title-h2.team-info__title.txt--bold.txt--gradient Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                .team-info__author
+                  p.team-info__author-name.txt--main.txt--grey.txt--bold Олександр Олександровський
+                  p.txt--main.txt--grey Керуючий партнер
+          .carousel-item(data-bs-interval="3000")
+            .carousel-item__inner
+              .team-img
+                img.team-img__photo(src="./assets/img/team_kobzar.jpg", alt="Photo Oksana Kobzar")
+              .team-info
+                +headingTitle('Команда')
+                h2.title-h2.team-info__title.txt--bold.txt--gradient Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA.
+                .team-info__author
+                  p.team-info__author-name.txt--main.txt--grey.txt--bold Oksana Kobzar
+                  p.txt--main.txt--grey Equity partner, Attorney-at-law
+          .carousel-item(data-bs-interval="3000")
+            .carousel-item__inner
+              .team-img
+                img.team-img__photo(src="./assets/img/team_binn.jpg", alt="Photo Sergey Binn")
+              .team-info
+                +headingTitle('Команда')
+                h2.title-h2.team-info__title.txt--bold.txt--gradient   Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents.
+                .team-info__author
+                  p.team-info__author-name.txt--main.txt--grey.txt--bold  Sergey Binn
+                  p.txt--main.txt--grey Associate
+        .carousel-indicators
+          button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+          button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
+          button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='2' aria-label='Slide 3')
+
+    

@@ -287,7 +287,7 @@
 
 .advantages {
   &__wrap {
-    padding: 30px 0;
+    padding-top: 30px;
     max-width: 1360px;
     margin: 0 auto;
   }
@@ -342,11 +342,11 @@
 
 .services {
   &__wrap {
-    padding-bottom: 45px;
+    padding: 30px 0 45px;
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 
   &-list {
@@ -371,7 +371,6 @@
 }
 
 .team {
-  margin-bottom: 60px;
   &__wrap {
     padding-top: 30px;
   }
@@ -427,6 +426,7 @@
 }
 
 .clients {
+  padding-top: 60px;
   &__title {
     color: $blue-dark;
     margin-bottom: 30px;

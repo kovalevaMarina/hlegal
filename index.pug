@@ -1,6 +1,6 @@
 extends ./pug/layout.pug
 block vars
-  - var title = 'Hlegal'
+  - var pageTitle = 'Hlegal'
 
 block content
   include ./pug/includes/mixins.pug
@@ -26,7 +26,5 @@ block content
   include ./pug/includes/clients.pug
   include ./pug/includes/publications.pug
 
-  block scripts
-    script(src='./js/bootstrap.min.js')
-    script(src='./js/main.js')
+    
 

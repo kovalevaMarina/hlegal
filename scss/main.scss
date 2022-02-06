@@ -134,6 +134,18 @@
       height: 32px;
     }
   }
+
+  &-slash {
+    display: inline-block;
+    font-size: 28px;
+    padding: 0 4px;
+    vertical-align: top;
+    color: $red;
+  }
+
+  &-txt {
+    vertical-align: top;
+  }
 }
 
 .lang-list {

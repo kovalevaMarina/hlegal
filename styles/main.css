@@ -806,6 +806,18 @@ body {
   height: 32px;
 }
 
+.logo-slash {
+  display: inline-block;
+  font-size: 28px;
+  padding: 0 4px;
+  vertical-align: top;
+  color: #f0145a;
+}
+
+.logo-txt {
+  vertical-align: top;
+}
+
 .lang-list__item--active {
   border-radius: 8px;
   background-color: #f0145a;

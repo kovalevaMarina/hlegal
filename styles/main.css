@@ -809,7 +809,7 @@ body {
 .logo-slash {
   display: inline-block;
   font-size: 28px;
-  padding: 0 4px;
+  padding: 0 5px;
   vertical-align: top;
   color: #f0145a;
 }
@@ -1389,6 +1389,14 @@ body {
   .logo-svg__wrap {
     width: 130px;
     height: 60px;
+  }
+  .logo-slash {
+    font-size: 44px;
+    font-weight: 700;
+  }
+  .logo-txt {
+    font-size: 36px;
+    line-height: 44px;
   }
   .nav {
     all: initial;

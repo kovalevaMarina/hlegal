@@ -1,3 +1,10 @@
+mixin logo (title)
+  a(href="./index.html").logo.logo__wrap
+    include ./logo.pug
+    if title
+      span.logo-slash /
+      span.logo-txt.title-h4.txt--white= title
+
 mixin langItem (langName, langClass)
   li.lang-list__item(class= langClass)
     button.lang-list__link.txt--uppercase.txt--white.txt--bold(href="#")= langName

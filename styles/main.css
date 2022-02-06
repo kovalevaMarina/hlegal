@@ -806,6 +806,18 @@ body {
   height: 32px;
 }
 
+.logo-slash {
+  display: inline-block;
+  font-size: 28px;
+  padding: 0 4px;
+  vertical-align: top;
+  color: #f0145a;
+}
+
+.logo-txt {
+  vertical-align: top;
+}
+
 .lang-list__item--active {
   border-radius: 8px;
   background-color: #f0145a;
@@ -955,7 +967,7 @@ body {
 }
 
 .advantages__wrap {
-  padding: 30px 0;
+  padding-top: 30px;
   max-width: 1360px;
   margin: 0 auto;
 }
@@ -1009,11 +1021,11 @@ body {
 }
 
 .services__wrap {
-  padding-bottom: 45px;
+  padding: 30px 0 45px;
 }
 
 .services__title {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .services-list__img {
@@ -1034,10 +1046,6 @@ body {
 
 .services-list__title--link:hover {
   color: #f0145a;
-}
-
-.team {
-  margin-bottom: 60px;
 }
 
 .team__wrap {
@@ -1089,6 +1097,10 @@ body {
 
 .team-info__author-name {
   margin-bottom: 6px;
+}
+
+.clients {
+  padding-top: 60px;
 }
 
 .clients__title {
@@ -1352,6 +1364,10 @@ body {
     padding: 0 60px;
     margin: 0 auto;
   }
+  .title-h2 {
+    font-size: 38px;
+    line-height: 46px;
+  }
   .header-flex {
     justify-content: flex-start;
   }
@@ -1415,12 +1431,13 @@ body {
     background-color: #e6e6f0;
   }
   .advantages__wrap {
-    padding: 60px 0;
+    padding-top: 60px;
   }
   .advantages .carousel-title {
-    font-size: 38px;
-    line-height: 46px;
     text-align: right;
+  }
+  .services__wrap {
+    padding: 60px 0 45px;
   }
   .services__title {
     margin-bottom: 60px;

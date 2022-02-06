@@ -25,6 +25,13 @@
     @include container-size(1600px, 0 60px);
   }
 
+  .title {
+    &-h2 {
+      font-size: $fs-h1;
+      line-height: $h1-ln-height;
+    }
+  }
+
   .header {
     &-flex {
       justify-content: flex-start;
@@ -96,19 +103,21 @@
 
   .advantages {
     &__wrap {
-      padding: 60px 0;
+      padding-top: 60px;
     }
 
     .carousel {
       &-title {
-        font-size: $fs-h1;
-        line-height: $h1-ln-height;
         text-align: right;
       }
     }
   }
 
   .services {
+    &__wrap {
+      padding: 60px 0 45px;
+    }
+
     &__title {
       margin-bottom: 60px;
     }

@@ -1,8 +1,13 @@
 extends ../layout.pug
 block vars
-  - var title = 'Services page'
-block styles
-  link(rel="stylesheet", href="../styles/main.css")
+  - var pageTitle = 'Services page'
+  - var logoTitle = 'services'
 
 block content
-  include ../../pug/includes/mixins.pug
+  include ../includes/mixins.pug
+  .section-gradient
+    .section-gradient__shadow.section-gradient__shadow--first
+    .section-gradient__shadow.section-gradient__shadow--second
+    include ../includes/header.pug
+    include ../includes/services.pug
+  include ../includes/clients.pug

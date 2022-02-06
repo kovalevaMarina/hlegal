@@ -2,8 +2,7 @@ header.header
   .container
     .header-grid
       .header-grid__logo
-        a(href="./index.html").logo.logo__wrap
-          include ./logo.pug
+        +logo(logoTitle)
       .header-grid__contact.header-space.flex-d.header-flex
         ul.lang-list.flex-d.flex-align--center
           +langItem('Ук')
@@ -30,7 +29,7 @@ header.header
             button.nav-close__btn
           ul.nav-list.flex-d
             +navItem('#', 'about us')
-            +navItem('./pages/services.html', 'services')
+            +navItem('./services.html', 'services')
             +navItem('#', 'team')
             +navItem('#', 'publications')
             +navItem('#', 'contact')

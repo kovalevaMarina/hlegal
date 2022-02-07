@@ -13,12 +13,12 @@ mixin navItem (navHref, navName)
   li.nav-list__item
     a(href= navHref, class=logoTitle == navName ? 'nav-active' : '').txt--bold.nav-list__link= navName
 
-mixin serviceItem (iconName, serviceTitel)
+mixin serviceItem (iconName, serviceHref, serviceTitel)
   .services-list__item
     .services-list__img.flex--center
       object.services-list__img--icon(data="./assets/svg/" + iconName + ".svg")
     h3.title-h3.services-list__title.txt--bold
-      a(href="#").services-list__title--link.txt--blue= serviceTitel
+      a(href= serviceHref).services-list__title--link.txt--blue= serviceTitel
     block
 
 mixin headingTitle (titleName)

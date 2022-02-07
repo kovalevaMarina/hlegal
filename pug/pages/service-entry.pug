@@ -1,0 +1,35 @@
+extends ../layout.pug
+block vars
+  - var pageTitle = 'Services entry'
+  - var logoTitle = 'services'
+
+block content
+  include ../includes/mixins.pug
+  .section-gradient
+    .section-gradient__shadow.section-gradient__shadow--first
+    .section-gradient__shadow.section-gradient__shadow--second
+    include ../includes/header.pug
+    section.service-entry
+      .container
+        .service-entry__content
+          .service-entry__img
+            object(data="./assets/svg/ecommerce.svg")
+          h2.title-2 IT and e-commerce
+          p.service-entry__txt.txt--white.
+            An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you 
+            from doing business. But there is not much work to do to hire an in-house lawyer.
+          p.service-entry__txt.txt--white.
+            In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we 
+            know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.
+          button Free consultation
+        .service-entry__area
+        h3.title-h3 Services in this area:
+          ul.service-entry-list
+            li.service-entry-list__item support of investment projects for the development of port infrastructure;
+            li.service-entry-list__item certification of GTS, entering information about them in mandatory databases and registers;
+            li.service-entry-list__item registration of permits for the construction of port terminals;
+            li.service-entry-list__item registration of permit and other mandatory documentation required for carrying out activities in the port (emission permit, conclusion on EIA, RTC, etc.);
+            li.service-entry-list__item support of procedures related to the lease of state property in the port;
+            li.service-entry-list__item support of procedures related to confirmation of the status of port operator, maritime agent, foreign sailing line;
+            li.service-entry-list__item support of procedures related to the inclusion of the company within the port;
+            li.service-entry-list__item appeals against actions related to the illegal imposition of services in the port by monopoly companies.

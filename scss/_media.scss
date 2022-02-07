@@ -63,6 +63,16 @@
       width: 130px;
       height: 60px;
     }
+
+    &-slash {
+      font-size: 44px;
+      font-weight: 700;
+    }
+
+    &-txt {
+      font-size: $txt-logo;
+      line-height: $txt-logo-ln-height;
+    }
   }
 
   .nav {
@@ -89,6 +99,11 @@
           border-bottom: 2px solid $red;
         }
       }
+    }
+
+    &-active {
+      color: $red;
+      border-bottom: 2px solid $red;
     }
   }
 

@@ -1423,6 +1423,10 @@ body {
     color: #f0145a;
     border-bottom: 2px solid #f0145a;
   }
+  .nav-active {
+    color: #f0145a;
+    border-bottom: 2px solid #f0145a;
+  }
   .contact-list__item {
     position: relative;
     padding-left: 18px;

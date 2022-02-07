@@ -11,7 +11,7 @@ mixin langItem (langName, langClass)
 
 mixin navItem (navHref, navName)
   li.nav-list__item
-    a(href= navHref).txt--bold.nav-list__link= navName
+    a(href= navHref, class=logoTitle == navName ? 'nav-active' : '').txt--bold.nav-list__link= navName
 
 mixin serviceItem (iconName, serviceTitel)
   .services-list__item

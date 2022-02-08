@@ -203,3 +203,22 @@ body {
 		}
 	}
 }
+
+.btn {
+	font-size: $txt-md;
+	line-height: $txt-ln-height;
+	font-weight: 700;
+	padding: 18px 30px;
+	color: $white;
+	background-color: $blue;
+	box-shadow: $shadow-btn;
+	border-radius: 12px;
+	transition: $transition-time;
+	&:hover {
+		background-color: $blue-hover;
+	}
+
+	&:active {
+		background-color: $blue-active;
+	}
+}

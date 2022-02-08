@@ -1335,6 +1335,7 @@ body {
 }
 
 .service-entry-list {
+  margin-left: 18px;
   list-style-type: disc;
 }
 

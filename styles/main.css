@@ -576,6 +576,11 @@ body {
   line-height: 26px;
 }
 
+.txt--lg {
+  font-size: 18px;
+  line-height: 26px;
+}
+
 .txt--dark {
   color: #323264;
 }
@@ -668,6 +673,7 @@ body {
 }
 
 .btn {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -1317,6 +1323,27 @@ body {
   font-size: 19px;
   line-height: 30px;
   margin-bottom: 28px;
+}
+
+.service-entry__area {
+  padding: 30px 0 60px;
+  border-top: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.service-entry__area-title {
+  margin-bottom: 30px;
+}
+
+.service-entry-list {
+  list-style-type: disc;
+}
+
+.service-entry-list__item {
+  margin-bottom: 15px;
+}
+
+.service-entry-list__item::marker {
+  color: #f0145a;
 }
 
 @media (min-width: 576px) {

@@ -115,6 +115,11 @@ body {
 		line-height: $txt-md-ln-height;
 	}
 
+	&--lg {
+		font-size: $txt-lg;
+		line-height: $txt-md-ln-height;
+	}
+
 	&--dark {
 		color: $blue-dark;
 	}
@@ -205,6 +210,7 @@ body {
 }
 
 .btn {
+	font-family: $fm-montserrat;
 	font-size: $txt-md;
 	line-height: $txt-ln-height;
 	font-weight: 700;

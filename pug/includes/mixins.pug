@@ -21,9 +21,9 @@ mixin serviceItem (iconName, serviceHref, serviceTitel)
       a(href= serviceHref).services-list__title--link.txt--blue= serviceTitel
     block
 
-mixin headingTitle (titleName)
+mixin headingTitle (hrefHead, titleName)
   .heading
-    a(href="#").heading__link.txt--caps.txt--bold.txt--uppercase.txt--blue.flex-d.flex-align--center= titleName
+    a(href= hrefHead).heading__link.txt--caps.txt--bold.txt--uppercase.txt--blue.flex-d.flex-align--center= titleName
       span.arrow
 
 mixin clientsItem (clientClass, logoClient, clientAlt, noneClass)

@@ -24,6 +24,10 @@ body {
 	margin: -15px;
 }
 
+.mt-60 {
+	margin-top: 60px;
+}
+
 @for $i from 1 through $gd-col {
 	.col-#{$i} {
 	  @include col-size($gd-size * $i);
@@ -115,6 +119,11 @@ body {
 		line-height: $txt-md-ln-height;
 	}
 
+	&--lg {
+		font-size: $txt-lg;
+		line-height: $txt-md-ln-height;
+	}
+
 	&--dark {
 		color: $blue-dark;
 	}
@@ -201,5 +210,25 @@ body {
 			border-right: 2px solid $red;
 			border-bottom: 2px solid $red; 
 		}
+	}
+}
+
+.btn {
+	font-family: $fm-montserrat;
+	font-size: $txt-md;
+	line-height: $txt-ln-height;
+	font-weight: 700;
+	padding: 18px 30px;
+	color: $white;
+	background-color: $blue;
+	box-shadow: $shadow-btn;
+	border-radius: 12px;
+	transition: $transition-time;
+	&:hover {
+		background-color: $blue-hover;
+	}
+
+	&:active {
+		background-color: $blue-active;
 	}
 }

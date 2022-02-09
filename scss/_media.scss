@@ -198,6 +198,18 @@
       }
     }
   }
+
+  .service-entry {
+    &__content {
+      padding: 60px 0;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+    }
+  }
 }
 
 @media (min-width: $md) {

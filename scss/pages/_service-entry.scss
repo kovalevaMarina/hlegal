@@ -1,0 +1,38 @@
+.service-entry {
+  &__content {
+    padding: 30px 0;
+  }
+
+  &__img {
+    @include serviceImg(0 auto 28px);
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__txt {
+    font-size: $txt-xl;
+    line-height: $txt-xl-ln-height;
+    margin-bottom: 28px;
+  }
+
+  &__area {
+    padding: 30px 0 60px;
+    border-top: 4px solid rgba(255, 255, 255, 0.5);
+    &-title {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-list {
+    margin-left: 18px;
+    list-style-type: disc;
+    &__item {
+      margin-bottom: 15px;
+      &::marker {
+        color: $red;
+      }
+    }
+  }
+}

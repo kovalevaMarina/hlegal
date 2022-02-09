@@ -1,8 +1,8 @@
 section.publications
   .container
     .publications__wrap
-      +headingTitle('Publications')
-      h2.title-h2.publications__title.txt--bold.txt--gradient We have something to tell
+      +headingTitle('#', 'Publications')
+      h2.title-h2.publications__title.txt--bold.txt--gradient= publicTitle
       .publications-list.row.m-15
         .column.col-12.col-sm-6.col-md-4
           +publicationsItem('publication_associate.jpg', 'Picture publication equity associate', 'Equity associate', 'April 22')

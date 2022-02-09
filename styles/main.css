@@ -451,6 +451,10 @@ body {
   margin: -15px;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+
 .col-1 {
   width: 8.33333%;
 }
@@ -576,6 +580,11 @@ body {
   line-height: 26px;
 }
 
+.txt--lg {
+  font-size: 18px;
+  line-height: 26px;
+}
+
 .txt--dark {
   color: #323264;
 }
@@ -665,6 +674,27 @@ body {
 .heading__link:hover .arrow {
   border-right: 2px solid #f0145a;
   border-bottom: 2px solid #f0145a;
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 18px 30px;
+  color: #ffffff;
+  background-color: #24a3ff;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0085ff;
+}
+
+.btn:active {
+  background-color: #006ccf;
 }
 
 .section-gradient {
@@ -772,7 +802,7 @@ body {
 .header-space {
   background-color: rgba(245, 245, 250, 0.2);
   margin: 0 -30px 0 -30px;
-  padding: 10px 30px 15px 30px;
+  padding: 10px 30px 10px 30px;
 }
 
 .header-grid {
@@ -877,7 +907,7 @@ body {
   position: absolute;
   right: 15px;
   width: 2px;
-  height: 28px;
+  height: 30px;
   background-color: #ec6f5d;
 }
 
@@ -1033,7 +1063,7 @@ body {
   height: 92px;
   background-color: #ffffff;
   border-radius: 24px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
 }
 
 .services-list__title {
@@ -1277,6 +1307,50 @@ body {
   display: block;
 }
 
+.service-entry__content {
+  padding: 30px 0;
+}
+
+.service-entry__img {
+  width: 92px;
+  height: 92px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  margin: 0 auto 28px;
+}
+
+.service-entry__title {
+  margin-bottom: 28px;
+}
+
+.service-entry__txt {
+  font-size: 19px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.service-entry__area {
+  padding: 30px 0 60px;
+  border-top: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.service-entry__area-title {
+  margin-bottom: 30px;
+}
+
+.service-entry-list {
+  margin-left: 18px;
+  list-style-type: disc;
+}
+
+.service-entry-list__item {
+  margin-bottom: 15px;
+}
+
+.service-entry-list__item::marker {
+  color: #f0145a;
+}
+
 @media (min-width: 576px) {
   .col-xs-1 {
     width: 8.33333%;
@@ -1507,6 +1581,14 @@ body {
     padding: 3px;
     border-radius: 50%;
     background-color: #b3b3ba;
+  }
+  .service-entry__content {
+    padding: 60px 0;
+  }
+  .service-entry-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
   }
 }
 

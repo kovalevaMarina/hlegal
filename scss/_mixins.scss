@@ -32,4 +32,12 @@
   max-width: $max-width;
   padding: $padding-x;
   margin: $margin-xy;
-} 
+}
+
+@mixin serviceImg($margin-b) {
+  width: 92px;
+  height: 92px;
+  background-color: $white;
+  border-radius: 24px;
+  margin: $margin-b;
+}

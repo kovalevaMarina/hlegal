@@ -24,6 +24,10 @@ body {
 	margin: -15px;
 }
 
+.mt-60 {
+	margin-top: 60px;
+}
+
 @for $i from 1 through $gd-col {
 	.col-#{$i} {
 	  @include col-size($gd-size * $i);

@@ -451,6 +451,10 @@ body {
   margin: -15px;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+
 .col-1 {
   width: 8.33333%;
 }
@@ -1577,6 +1581,14 @@ body {
     padding: 3px;
     border-radius: 50%;
     background-color: #b3b3ba;
+  }
+  .service-entry__content {
+    padding: 60px 0;
+  }
+  .service-entry-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
   }
 }
 

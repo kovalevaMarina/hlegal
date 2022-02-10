@@ -39,3 +39,10 @@ mixin publicationsItem (publicImg, publicAlt, publicTitle, publicDate)
       h4.publications-list__info-title.txt--main.txt--bold.txt--blue= publicTitle
       p.publications-list__info-date.txt--uppercase.txt--grey.txt--bold= publicDate
       block
+
+mixin aboutlist (aboutIcon, aboutNumber)
+  li.about-intro__item
+    .about-intro__wrap
+      object.about-intro__icon(data="./assets/svg/" + aboutIcon)
+      span.about-intro__number= aboutNumber
+    block

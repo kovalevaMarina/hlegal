@@ -6,13 +6,24 @@ block vars
 block content
   include ../includes/mixins.pug   
   include ../includes/header.pug
-  section.idea
+  section.about-intro
     .container
       h2.title-h2.txt--gradient.txt--bold We turn over the idea of legal services
-      p.idea-txt.
+      p.about-intro__txt.
         Consolidating many years of experience and practice, the company's lawyers accompany complex 
         projects and achieve the adoption of a number of decisions that are important for the industry. 
         Many people form the practice of applying the law of the sea in Ukraine.
-      p.idea-txt.
+      p.about-intro__txt.
         HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms,
         the trust of large Ukrainian and international companies, and the recognition of professional ratings.
+      ul.about-intro__list
+        +aboutlist('flag.svg', '10+')
+          p.about-intro__txt years of relevant experience
+        +aboutlist('case.svg', '30+')
+          p.about-intro__txt active clients who entrust us with their orders on a monthly basis
+        +aboutlist('probono.svg', '50+')
+          p.about-intro__txt hours of pro bono work annually
+  .about-team
+    p.about-team__txt team
+        
+

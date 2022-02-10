@@ -42,7 +42,7 @@ mixin publicationsItem (publicImg, publicAlt, publicTitle, publicDate)
 
 mixin aboutlist (aboutIcon, aboutNumber)
   li.about-intro__item
-    .about-intro__wrap
+    .about-intro__wrap.flex-d.flex-align--center
       object.about-intro__icon(data="./assets/svg/" + aboutIcon)
-      span.about-intro__number= aboutNumber
+      span.about-intro__number.txt--bold.txt--gradient= aboutNumber
     block

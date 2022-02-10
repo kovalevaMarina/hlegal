@@ -124,6 +124,11 @@ body {
 		line-height: $txt-md-ln-height;
 	}
 
+	&--xl {
+		font-size: $txt-xl;
+		line-height: $txt-xl-ln-height;
+	}
+
 	&--dark {
 		color: $blue-dark;
 	}

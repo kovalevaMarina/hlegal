@@ -46,3 +46,8 @@ mixin aboutlist (aboutIcon, aboutNumber)
       object.about-intro__icon(data="./assets/svg/" + aboutIcon)
       span.about-intro__number.txt--bold.txt--gradient= aboutNumber
     block
+
+mixin achievementsItem (achievementsImg, achievementsAlt)
+  .achievements-carousel__inner.flex--center
+    .achievements-carousel__img
+      img(src="./assets/img/" + achievementsImg, alt= achievementsAlt)

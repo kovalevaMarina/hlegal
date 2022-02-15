@@ -22,7 +22,11 @@
   }
 
   .container {
-    @include container-size(1600px, 0 60px);
+    @include container-size(1720px, 0 60px);
+  }
+
+  .container-sm {
+    @include container-size(1200px, 0 60px);
   }
 
   .title {
@@ -233,6 +237,17 @@
     }
   }
 
+  .about {
+    &-team {
+      &__txt {
+        font-size: $txt-team;
+        line-height: $txt-team-ln-height;
+        letter-spacing: 63px;
+        padding: 89px 0;
+      }
+    }
+  }
+
   .service-entry {
     &__content {
       padding: 60px 0;
@@ -334,9 +349,50 @@
       justify-content: space-between;
     }
   }
+
+  .about {
+    &-intro {
+      &__list {
+        max-width: 388px;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 60px 0;
+    }
+
+    &-content {
+      max-width: 662px;
+    }
+
+    &-desc {
+      padding-right: 30px;
+    }
+
+    &-info {
+      &__title {
+        padding-left: 30px;
+      }
+    }
+
+    &-team {
+      &__txt {
+        font-size: $txt-team-md;
+        line-height: $txt-team-md-height;
+        padding: 103px 0;
+      }
+    }
+  }
 }
 
 @media (min-width: $xl) {
+  .container-sm {
+    @include container-size(1480px, 0 60px);
+  }
+
   .container-lg {
     @include container-size(1720px, 0px);
   }
@@ -360,6 +416,20 @@
         &-ultimatecard {
           border-radius: 0 0 12px 0;
         }
+      }
+    }
+  }
+
+  .about {
+    &-content {
+      max-width: 942px;
+    }
+
+    &-team {
+      &__txt {
+        font-size: $txt-team-lg;
+        line-height: $txt-team-lg-height;
+        padding: 236px 0;
       }
     }
   }

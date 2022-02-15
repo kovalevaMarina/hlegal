@@ -937,9 +937,10 @@ body {
   border-radius: 8px;
 }
 
-.lang-list .active {
+.lang-list .active .lang-list__link {
   border-radius: 8px;
   background-color: #f0145a;
+  color: #ffffff;
 }
 
 .nav {

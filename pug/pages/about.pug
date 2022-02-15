@@ -8,16 +8,17 @@ block content
   include ../includes/mixins.pug   
   include ../includes/header.pug
   section.about-intro
-    .container
-      .about-intro__inner
-        h2.title-h2.about-intro__title.txt--gradient.txt--bold We turn over the idea of legal services
-        p.about-desc.txt--xl.txt--black.
-          Consolidating many years of experience and practice, the company's lawyers accompany complex 
-          projects and achieve the adoption of a number of decisions that are important for the industry. 
-          Many people form the practice of applying the law of the sea in Ukraine.
-        p.about-desc.txt--xl.txt--black.
-          HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms,
-          the trust of large Ukrainian and international companies, and the recognition of professional ratings.
+    .container-sm
+      .about-inner
+        .about-content
+          h2.title-h2.about-intro__title.txt--gradient.txt--bold We turn over the idea of legal services
+          p.about-desc.txt--xl.txt--black.
+            Consolidating many years of experience and practice, the company's lawyers accompany complex 
+            projects and achieve the adoption of a number of decisions that are important for the industry. 
+            Many people form the practice of applying the law of the sea in Ukraine.
+          p.about-desc.txt--xl.txt--black.
+            HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms,
+            the trust of large Ukrainian and international companies, and the recognition of professional ratings.
         ul.about-intro__list
           +aboutlist('flag.svg', '10+')
             p.about-intro__txt.txt--main.txt--dark years of relevant experience
@@ -29,14 +30,16 @@ block content
     .container
       p.about-team__txt.txt--white.txt--uppercase.txt--bold.txt--center team
   section.about-info
-    .container
-      p.about-desc.txt--xl.txt--black.
-        The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, 
-        but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, 
-        IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.
-      p.about-desc.txt--xl.txt--black Quality is what we care about the most.
-      p.about-desc.txt--xl.txt--black It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.
-      h2.title-h2.txt--gradient.txt--bold Quality is what we care about the most.
+    .container-sm
+      .about-inner
+        .about-content
+          p.about-desc.txt--xl.txt--black.
+            The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, 
+            but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, 
+            IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.
+          p.about-desc.txt--xl.txt--black Quality is what we care about the most.
+          p.about-desc.txt--xl.txt--black It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.
+        h2.title-h2.about-info__title.txt--gradient.txt--bold Quality is what we care about the most.
   section.achievements
     .container
       .achievements__inner

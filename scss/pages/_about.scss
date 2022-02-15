@@ -1,0 +1,97 @@
+.about {
+  &-intro {
+    &__inner {
+      padding: 30px 0;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+    }
+
+    &__list {
+      padding-left: 30px;
+      border-left: 4px solid $grey-separator;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &__wrap {
+      margin-bottom: 10px;
+    }
+
+    &__icon {
+      margin-right: 8px;
+    }
+
+    &__number {
+      font-size: $txt-logo;
+      line-height: $txt-logo-ln-height;
+    }
+  }
+
+  &-desc {
+    margin-bottom: 30px;
+  }
+
+  &-team {
+    background-image: url("../../assets/img/team_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__txt {
+      font-size: $txt-logo;
+      line-height: $txt-logo-ln-height;
+      padding: 35px 0;
+      letter-spacing: 13px;
+      text-shadow: $shadow-txt;
+      opacity: 0.8;
+    }
+  }
+
+  &-info {
+    padding: 30px 0 60px;
+  }
+}
+
+.achievements {
+  background-color: $grey-bg;
+  &__inner {
+    padding: 30px 0;
+    border-bottom: 2px solid $grey-separator;
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+
+  &-carousel {
+    &__inner {
+      width: 255px;
+      padding: 25px 0;
+      margin: 0 auto 30px auto;
+      background-color: $white;
+      border-radius: 12px;
+    }
+  }
+
+  .carousel-indicators {
+    position: static;
+    margin-bottom: 0;
+    [data-bs-target] {
+      width: 16px;
+      height: 16px;
+      background-color: $blue;
+      border-radius: 50%;
+      margin: 0 15px 0 0;
+      border: none;
+      opacity: 0.2;
+    }
+  
+    .active {
+      opacity: 1;
+    }
+  }
+}

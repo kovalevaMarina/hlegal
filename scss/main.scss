@@ -100,7 +100,6 @@
   }
 
   &-space {
-    background-color: $grey-space;
     margin: 0 -30px 0 -30px;
     padding: 10px 30px 10px 30px;
   }
@@ -128,7 +127,6 @@
 .logo {
   display: block;
   &-svg {
-    fill: $white;
     &__wrap {
       width: 70px;
       height: 32px;
@@ -149,22 +147,18 @@
 }
 
 .lang-list {
-  &__item {
-    &--active {
-      border-radius: 8px;
-      background-color: $red;
-    }
-  }
-
   &__link {
     display: block;
     font-size: $txt-sm;
     line-height: $txt-sm-ln-height;
     padding: 5px 7px;
     border-radius: 8px;
-    &:hover {
-      background-color: $grey-space;
-    }
+  }
+
+  .active .lang-list__link {
+    border-radius: 8px;
+    background-color: $red;
+    color: $white;
   }
 }
 
@@ -227,15 +221,6 @@
       background-color: $grey-bg;
       border-radius: 12px;
     }
-
-    &__link {
-      font-size: $txt-link;
-      line-height: $txt-link-ln-height;
-      color: $blue;
-      &:hover {
-        color: $red;
-      }
-    }
   }
 
   &.visible {
@@ -276,7 +261,6 @@
   &__burger {
     width: 18px;
     height: 2px;
-    background-color: $white;
     &::before,
     &::after {
       content: '';
@@ -612,6 +596,6 @@
     }
   }
 }
-
+@import "./pages/about";
 @import "./pages/service-entry";
 @import "./media";

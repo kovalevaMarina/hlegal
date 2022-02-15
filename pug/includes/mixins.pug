@@ -3,11 +3,11 @@ mixin logo (title)
     include ./logo.pug
     if title
       span.logo-slash /
-      span.logo-txt.title-h4.txt--white= title
+      span.logo-txt.title-h4= title
 
 mixin langItem (langName, langClass)
   li.lang-list__item(class= langClass)
-    button.lang-list__link.txt--uppercase.txt--white.txt--bold(href="#")= langName
+    button.lang-list__link.txt--uppercase.txt--bold(href="#")= langName
 
 mixin navItem (navHref, navName)
   li.nav-list__item
@@ -39,3 +39,15 @@ mixin publicationsItem (publicImg, publicAlt, publicTitle, publicDate)
       h4.publications-list__info-title.txt--main.txt--bold.txt--blue= publicTitle
       p.publications-list__info-date.txt--uppercase.txt--grey.txt--bold= publicDate
       block
+
+mixin aboutlist (aboutIcon, aboutNumber)
+  li.about-intro__item
+    .about-intro__wrap.flex-d.flex-align--center
+      object.about-intro__icon(data="./assets/svg/" + aboutIcon)
+      span.about-intro__number.txt--bold.txt--gradient= aboutNumber
+    block
+
+mixin achievementsItem (achievementsImg, achievementsAlt)
+  .achievements-carousel__inner.flex--center
+    .achievements-carousel__img
+      img(src="./assets/img/" + achievementsImg, alt= achievementsAlt)

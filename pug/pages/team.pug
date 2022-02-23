@@ -1,0 +1,13 @@
+extends ../layout.pug
+block vars
+  - var pageTitle = 'Team page'
+  - var logoTitle = 'team'
+  - var isDark = false
+
+block content
+  include ../includes/mixins.pug   
+  include ../includes/header.pug
+  section.members
+    .container
+      .members__title
+        h1.title-h2.txt--gradient.txt--bold We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where most are powerless.

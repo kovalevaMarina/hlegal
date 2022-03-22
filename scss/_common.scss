@@ -308,14 +308,7 @@ body {
 }
 
 .arrow {
-	width: 7px;
-	height: 7px;
-	display: inline-block;
-	border-right: 2px solid $blue;
-	border-bottom: 2px solid $blue;
-	transform: rotate(-45deg);
-	margin-left: 3px;
-	transition: $transition-time;
+	@include arrow(7px, 7px, 3px);
 }
 
 .heading {

@@ -51,3 +51,14 @@ mixin achievementsItem (achievementsImg, achievementsAlt)
   .achievements-carousel__inner.flex--center
     .achievements-carousel__img
       img(src="./assets/img/" + achievementsImg, alt= achievementsAlt)
+
+mixin membersItem (memberPhoto, memberAlt, memberNameLink, memberName, memberPosition, arrowLink)
+  .members-list__item
+    .members-list__img
+      img.members-list__img--photo(src="./assets/img/" + memberPhoto, alt= memberAlt)
+    .members-list__about
+      a.members-list__about-person.txt--main.txt--bold.txt--dark(href= memberNameLink) 
+        p.members-list__about-person--name= memberName
+        p.txt--caps-md.txt--grey= memberPosition
+      a.members-list__about-arrow(href= arrowLink)
+        span.arrow.members-arrow

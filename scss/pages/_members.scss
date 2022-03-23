@@ -1,0 +1,56 @@
+.members {
+  &__title {
+    margin: 30px 0;
+  }
+
+  &-list {
+    padding-bottom: 60px;
+    &__img {
+      max-width: 315px;
+      height: 300px;
+      margin-bottom: 15px;
+      &--photo {
+        @extend %images;
+        border-radius: 12px;
+      }
+    }
+
+    &__about {
+      display: flex;
+      justify-content: space-between;
+      &-arrow {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-color: $grey-bg;
+        border-radius: 50%;
+      }
+
+      &-person {
+        transition: $transition-time;
+
+        &:hover {
+          color: $red;
+        }
+
+        &:hover ~ .members-list__about-arrow {
+          background-color: $grey-bg-alt;
+        }
+
+        &:hover ~ .members-list__about-arrow .arrow {
+          border-right: 2px solid $red;
+	        border-bottom: 2px solid $red;
+        }
+
+        &--name {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    @include arrow(8px, 8px, 11px);
+    margin-top: 12px;
+  }
+}

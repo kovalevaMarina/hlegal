@@ -1,9 +1,10 @@
 .members {
   &__title {
-    padding: 30px 0;
+    margin: 30px 0;
   }
 
   &-list {
+    padding-bottom: 60px;
     &__img {
       max-width: 315px;
       height: 300px;

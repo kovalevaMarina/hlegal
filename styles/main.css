@@ -1510,7 +1510,11 @@ body {
 }
 
 .members__title {
-  padding: 30px 0;
+  margin: 30px 0;
+}
+
+.members-list {
+  padding-bottom: 60px;
 }
 
 .members-list__img {

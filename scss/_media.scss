@@ -29,6 +29,14 @@
     @include container-size(1200px, 0 60px);
   }
 
+  .column {
+    padding: 30px;
+  }
+
+  .m-15 {
+    margin: -30px;
+  }
+
   .title {
     &-h2 {
       font-size: $fs-h1;
@@ -257,6 +265,20 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 60px;
+    }
+  }
+
+  .members {
+    &__title {
+      max-width: 664px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+    
+    &-list {
+      &__img {
+        height: 400px;
+      }
     }
   }
 }

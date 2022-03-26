@@ -1,13 +1,12 @@
 .members {
   &__title {
-    margin: 30px 0;
+    padding: 30px 0;
   }
 
   &-list {
     padding-bottom: 60px;
     &__img {
-      max-width: 315px;
-      height: 300px;
+      min-height: 300px;
       margin-bottom: 15px;
       &--photo {
         @extend %images;

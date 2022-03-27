@@ -2007,4 +2007,7 @@ body {
     line-height: 117px;
     padding: 236px 0;
   }
+  .members__title {
+    max-width: 1080px;
+  }
 }

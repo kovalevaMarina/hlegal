@@ -455,4 +455,10 @@
       }
     }
   }
+
+  .members {
+    &__title {
+      max-width: 1080px;
+    }
+  }
 }

@@ -1,0 +1,37 @@
+extends ../layout.pug
+block vars
+  - var pageTitle = 'Team entry page'
+  - var logoTitle = 'team'
+  - var isDark = false
+
+block content
+  include ../includes/mixins.pug   
+  include ../includes/header.pug
+  section.members-entry
+    .container
+      .members-entry__inner
+        .members-entry__grid
+          .members-entry__img
+            img.members-entry__img--photo(src="./assets/img/team_kobzar.jpg", alt="Photo member of team")
+          .members-entry__grid-info
+            h1.members-entry__title.title-h1.txt--bold.txt--gradient Oksana Kobzar
+            .members-entry__contact.flex-d
+              p.txt--caps-md.txt--grey Equity partner, Attorney-at-law
+              a.txt--main.txt--blue(href="mailto:kobzar@forstudy.space") kobzar@forstudy.space
+              a.txt--main.txt--blue(href="#") LinkedIn profile
+          .members-entry__grid-txt.members-entry__decs
+            p.txt--md.members-entry__decs-txt.
+              Oksana heads the practice of international trade and shipping. He specializes in 
+              resolving disputes related to the purchase and sale of raw materials and 
+              transportation of goods by sea.
+            p.txt--md.members-entry__decs-txt.
+              Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, 
+              container lines, as well as international banks and P&I clubs.
+            h3.members-entry__title.txt--caps.txt--bold.txt--uppercase.txt--dark Education
+            p.txt--md.members-entry__decs-txt National University "Odessa Law Academy", Master of Law.
+            h3.members-entry__title.txt--caps.txt--bold.txt--uppercase.txt--dark Experience
+            p.txt--md.members-entry__decs-txt.
+              Her professional experience includes resolving disputes under English law and representing 
+              interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also 
+              represents the interests of clients in the state courts of Ukraine on similar disputes, 
+              as well as in the ICAC and IAC at the CCI of Ukraine.

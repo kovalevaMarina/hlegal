@@ -2045,6 +2045,27 @@ body {
     width: 400px;
     height: 500px;
   }
+  .members-entry__grid {
+    grid-template-rows: 1fr 5fr;
+  }
+  .members-entry__contact {
+    flex-direction: row;
+  }
+  .members-entry__contact-link {
+    position: relative;
+    padding-left: 26px;
+  }
+  .members-entry__contact-link::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #e6e6f0;
+  }
 }
 
 @media (min-width: 1920px) {

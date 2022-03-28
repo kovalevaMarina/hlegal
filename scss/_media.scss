@@ -463,6 +463,20 @@
       width: 400px;
       height: 500px;
     }
+
+    &__grid {
+      grid-template-rows: 1fr 5fr;
+    }
+
+    &__contact {
+      flex-direction: row;
+      &-link {
+        @include circle(26px);
+        &::before {
+          @include circleBefore(11px, $grey-separator);
+        }
+      }
+    }
   }
 }
 

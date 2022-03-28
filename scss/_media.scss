@@ -281,6 +281,31 @@
       }
     }
   }
+
+  .members-entry {
+    &__inner {
+      padding: 60px 0;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    &__grid-txt {
+      grid-column: 1 / 3;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__img {
+      width: 300px;
+      height: 375px;
+    }
+  }
 }
 
 @media (min-width: $md) {
@@ -405,6 +430,51 @@
         font-size: $txt-team-md;
         line-height: $txt-team-md-height;
         padding: 103px 0;
+      }
+    }
+  }
+
+  .members-entry {
+    &__grid {
+      column-gap: 60px;
+      row-gap: 30px;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+      &-img {
+        grid-row: 1 / 3;
+      }
+
+      &-info {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      &-txt {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .members-entry {
+    &__img {
+      width: 400px;
+      height: 500px;
+    }
+
+    &__grid {
+      grid-template-rows: 1fr 5fr;
+    }
+
+    &__contact {
+      flex-direction: row;
+      &-link {
+        @include circle(26px);
+        &::before {
+          @include circleBefore(11px, $grey-separator);
+        }
       }
     }
   }
